@@ -1,0 +1,39 @@
+﻿body 
+{
+   top: 0px;
+   right: 0px;
+   bottom: 0px;
+   left: 0px;
+   width:700px;
+   height: 100%;
+   margin: auto;
+   font-family: Helvetica, sans-serif, Arial !important;
+ } 
+
+.e1
+{
+    height: 240px;
+    border: 0px solid #000000;
+    margin: 0 auto;
+}
+
+.e2
+{
+    height: 113px;
+    width: 299px;
+    border: 0px solid #000000;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.e3
+{
+    /*margin-top:10px;*/
+    font-size: 10pt;
+    color: #999999;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+

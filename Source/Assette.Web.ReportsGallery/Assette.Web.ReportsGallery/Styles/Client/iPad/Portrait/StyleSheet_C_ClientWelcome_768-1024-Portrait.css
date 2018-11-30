@@ -1,0 +1,26 @@
+﻿/*
+Original 
+========
+Full : 1200px;
+Navigation : 300px;
+Content : 900px;
+
+iPad (1024*768)
+===============
+Full : 748px;
+Orientation : Portrait
+Percentage : 62.33333%
+
+Navigation : 186.99px;
+Content : 560.99px;
+
+Navigation : 188px;
+Content : 560px;
+
+*/
+
+.r3 
+{
+    width: 185px; /* 299px */
+    float: left;
+}

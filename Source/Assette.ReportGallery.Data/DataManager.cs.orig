@@ -1,0 +1,422 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using BTA.EPM.Common;
+using log4net;
+using Assette.PA.Data;
+using Assette.ReportGallery.Data.Models;
+using System.Data.EntityClient;
+using System.Runtime.Serialization.Json;
+using System.Web.Script.Serialization;
+using System.Data.Objects;
+using System.Runtime.Serialization.Formatters.Binary;
+
+namespace Assette.ReportGallery.Data
+{
+    public class DataManager
+    {
+        private static readonly ILog Log = LogManager.GetLogger(typeof(DataManager));
+        private static string clientCode = string.Empty;
+
+        public DataManager(string code)
+        {
+            clientCode = code;
+         
+            if (Log.IsDebugEnabled)
+            {
+                Log.Debug(clientCode);
+            }
+        }
+
+        public static string GetConnectionString()
+        {
+            var ConnectionString = string.Empty;
+
+            if (BTAConnectionManager.IsInTransaction)
+            {
+                ConnectionString = BTAConnectionManager.Connection.ClientConnectionString;
+            }
+            else
+            {
+                try
+                {
+                    BTAConnectionManager.CreateConnection(clientCode);
+
+                    ConnectionString = BTAConnectionManager.Connection.ClientConnectionString;
+                }
+                catch (Exception ex)
+                {
+                    Logger.Write(ex.ToString());
+                }              
+            }
+
+            return ConnectionString;
+        }
+
+        public static RepGlryEntities GetEntity()
+        {
+            var entity = new RepGlryEntities();
+
+            ((EntityConnection)entity.Connection).StoreConnection.ConnectionString = GetConnectionString();
+
+            return entity;
+        }
+
+        public static string CreateUser(string firstName, string lastName, string email, string comapany, string registeredIP)
+        {
+            var rtnValue = string.Empty;
+
+            try
+            {
+                var prospect = new Prospect();
+
+                prospect.Id = Guid.NewGuid();
+                prospect.FirstName = firstName.Trim();
+                prospect.LastName = lastName.Trim();
+                prospect.Email = email.Trim();
+                prospect.Company = comapany.Trim();
+                prospect.RegisteredDate = DateTime.Now;
+                prospect.RegisteredIP = registeredIP.Trim();
+
+                var entity = GetEntity();
+
+                entity.AddToProspects(prospect);
+                rtnValue = entity.SaveChanges().ToString();
+            }
+            catch (Exception ex)
+            {
+                rtnValue = "-1"; // error
+
+                Logger.Write(ex.ToString());
+            }
+
+            return rtnValue;
+        }
+
+        public static string CheckEmailExistence(string email)
+        {
+            var rtnValue = string.Empty;
+
+            try
+            {
+                var entity = GetEntity();
+                var record = entity.Prospects.Any(m => m.Email == email);
+
+                if (record == true)
+                {
+                    rtnValue = "1"; // record exists
+                }
+                else
+                {
+                    rtnValue = "0"; // no record found
+                }
+            }
+            catch (Exception ex)
+            {
+                rtnValue = "-1"; // error
+
+                Logger.Write(ex.ToString());
+            }
+
+            return rtnValue;           
+        }
+
+        public static string GetUserDetailsByEmail(string email)
+        {
+            var rtnValue = string.Empty;
+
+            try
+            {
+                var entity = GetEntity();
+
+                ObjectSet<Prospect> prospects = entity.Prospects;
+
+                var objects =
+                    (from prospect in prospects
+                     where prospect.Email.ToUpper() == email.ToUpper()
+                     orderby prospect.Id
+                     select new
+                     {
+                         Id = prospect.Id,
+                         FirstName = prospect.FirstName,
+                         LastName = prospect.LastName,
+                         Email = prospect.Email,
+                         Company = prospect.Company,
+                         RegisteredIP = prospect.RegisteredIP,
+                         RegisteredDate = prospect.RegisteredDate
+                     });
+
+
+                var serializer = new JavaScriptSerializer();
+                rtnValue = serializer.Serialize(objects);
+            }
+            catch (Exception ex)
+            {
+                rtnValue = "-1"; // error
+
+                Logger.Write(ex.ToString());
+            }
+
+            return rtnValue;
+        }
+
+        public static string GetClientDetails()
+        {
+            var rtnValue = string.Empty;
+
+            try
+            {
+                var entity = GetEntity();
+
+                ObjectSet<Prospect> prospects = entity.Prospects;
+
+                var objects =
+                    (from prospect in prospects
+                     orderby prospect.Id
+                     select new
+                     {
+                         Id = prospect.Id,
+                         FirstName = prospect.FirstName,
+                         LastName = prospect.LastName,
+                         Email = prospect.Email,
+                         Company = prospect.Company,
+                         RegisteredIP = prospect.RegisteredIP,
+                         RegisteredDate = prospect.RegisteredDate
+                     });
+
+
+                var serializer = new JavaScriptSerializer();
+                rtnValue = serializer.Serialize(objects);
+            }
+            catch (Exception ex)
+            {
+                rtnValue = "-1"; // error
+
+                Logger.Write(ex.ToString());
+            }
+
+            return rtnValue;
+        }
+
+        public static string GetPAObjects(int pageIndex, int categoryId, int typeId, string searchText)
+        {
+            var rtnValue = string.Empty;
+
+            int initialRecordCount = 15;
+            int startRow = (pageIndex - 1) * initialRecordCount;
+
+            try
+            {
+                var entity = GetEntity();
+
+                ObjectSet<PAObject> pAObjects = entity.PAObjects;
+                ObjectSet<PAObjectType> pAObjectTypes = entity.PAObjectTypes;
+                ObjectSet<PAObjectCategory> pAObjectCategories = entity.PAObjectCategories;
+
+                //var query =
+                //    from pAObject in pAObjects
+                //    join pAObjectType in pAObjectTypes on pAObject.ObjectTypeID equals pAObjectType.ID
+                //    join pAObjectCategory in pAObjectCategories on pAObject.ObjectCategoryID equals pAObjectCategory.ID
+                //    where order.OnlineOrderFlag == true
+                //    && order.OrderDate.Month == 8
+                //    select pAObject; 
+
+                //var objects =
+                //    (from pAObject in pAObjects
+                //    join pAObjectType in pAObjectTypes on pAObject.ObjectTypeID equals pAObjectType.ID
+                //    join pAObjectCategory in pAObjectCategories on pAObject.ObjectCategoryID equals pAObjectCategory.ID
+                //    orderby pAObject.ID 
+                //    select new
+                //    {
+                //        ID = pAObject.ID,
+                //        Name = pAObject.Name,
+                //        Description = pAObject.Description,
+                //        TypeId = pAObject.ObjectTypeID,
+                //        Type = pAObjectType.Type,
+                //        CategoryId = pAObject.ObjectCategoryID,
+                //        Category = pAObjectCategory.Category
+                //    }).Skip(startRow).Take(initialRecordCount);
+
+                //var predicate = PredicateBuilder.True<PAObject>();
+                //if (categoryId != 0)
+                //{
+                //    predicate = predicate.And(e => e.ObjectCategoryID == categoryId);
+                //}
+                //if (typeId != 0)
+                //{
+                //    predicate = predicate.And(e => e.ObjectTypeID == typeId);
+                //}
+
+                var objects =
+                     (from pAObject in pAObjects
+                      join pAObjectType in pAObjectTypes on pAObject.ObjectTypeID equals pAObjectType.ID
+                      join pAObjectCategory in pAObjectCategories on pAObject.ObjectCategoryID equals pAObjectCategory.ID
+                      orderby pAObject.ID 
+                      select new
+                     {
+                         ID = pAObject.ID,
+                         Name = pAObject.Name,
+                         Description = pAObject.Description,
+                         TypeId = pAObject.ObjectTypeID,
+                         Type = pAObjectType.Type,
+                         CategoryId = pAObject.ObjectCategoryID,
+                         Category = pAObjectCategory.Category,
+                     });
+
+                // filter by category
+                if (categoryId != 0)
+                {
+                    objects = objects.Where(e => e.CategoryId == categoryId);
+                }
+
+                // filter by type
+                if (typeId != 0)
+                {
+                    objects = objects.Where(e => e.TypeId == typeId);
+                }
+
+                // filter by name
+                if (searchText != "")
+                {
+                    objects = objects.Where(e => e.Name.Contains(searchText));
+                }
+                
+                // scroll functionality
+                objects = objects.Skip(startRow).Take(initialRecordCount);
+
+                var serializer = new JavaScriptSerializer();
+                serializer.MaxJsonLength = Int32.MaxValue;
+                rtnValue = serializer.Serialize(objects);
+            }
+            catch (Exception ex)
+            {
+                rtnValue = "-1"; // error
+
+                Logger.Write(ex.ToString());
+            }
+
+            return rtnValue;
+        }
+
+        public static string GetPAObjectTypes()
+        {
+            var rtnValue = string.Empty;
+
+            try
+            {
+                var entity = GetEntity();
+
+                ObjectSet<PAObjectType> pAObjectTypes = entity.PAObjectTypes;
+
+                var objects =
+                    (from pAObjectType in pAObjectTypes
+                     orderby pAObjectType.ID
+                     select new
+                     {
+                         ID = pAObjectType.ID,
+                         Type = pAObjectType.Type
+                     });
+
+
+                var serializer = new JavaScriptSerializer();
+                rtnValue = serializer.Serialize(objects);
+            }
+            catch (Exception ex)
+            {
+                rtnValue = "-1"; // error
+
+                Logger.Write(ex.ToString());
+            }
+
+            return rtnValue;
+        }
+
+        public static string GetPAObjeCtategories()
+        {
+            var rtnValue = string.Empty;
+
+            try
+            {
+                var entity = GetEntity();
+
+                ObjectSet<PAObjectCategory> pAObjectCategories = entity.PAObjectCategories;
+
+                var objects =
+                    (from pAObjectCategory in pAObjectCategories
+                     orderby pAObjectCategory.ID
+                     select new
+                     {
+                         ID = pAObjectCategory.ID,
+                         Type = pAObjectCategory.Category
+                     });
+
+
+                var serializer = new JavaScriptSerializer();
+                rtnValue = serializer.Serialize(objects);
+            }
+            catch (Exception ex)
+            {
+                rtnValue = "-1"; // error
+
+                Logger.Write(ex.ToString());
+            }
+
+            return rtnValue;
+        }
+
+        public static byte[] GetThumbnail(string Id)
+        {
+            byte[] rtnValue = new byte[0];
+
+            Int64 ID = Int64.Parse(Id);
+
+            try
+            {
+                var entity = GetEntity();
+
+                var objects = (from paObject in entity.PAObjects
+                               where paObject.ID == ID
+                               select paObject).Single();
+
+                if (objects.BinaryImage == null)
+                {
+                    rtnValue = new byte[0];
+                }
+                else
+                {
+                    rtnValue = objects.BinaryImage.ToArray();
+                }
+            }
+            catch (Exception ex)
+            {
+                rtnValue = new byte[0];  // error
+
+                Logger.Write(ex.ToString());
+            }
+
+            return rtnValue;
+        }
+
+        // JavaScriptSerializer oSerializer = new JavaScriptSerializer();
+
+        // object list
+        // string sJSON = oSerializer.Serialize(oList);
+        // Response.Write(sJSON);
+        // List<Employee> oNewList = (List<Employee>)oSerializer.Deserialize(sJSON, typeof(List<Employee>));
+        // Response.Write(oNewList.Count + “”);
+ 
+        // object
+        // string sJSON2 = oSerializer.Serialize(oEmployee1);
+        // Response.Write(sJSON2);
+        // Employee emp = (Employee)oSerializer.Deserialize(sJSON2, typeof(Employee));
+        // Response.Write(emp.Name + “”);
+
+        //using (RepGlryEntities entity = new RepGlryEntities())
+        //{
+        //     // code goes here
+        //}
+    }       
+}

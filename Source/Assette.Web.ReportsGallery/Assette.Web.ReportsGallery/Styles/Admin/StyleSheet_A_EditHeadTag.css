@@ -1,0 +1,141 @@
+﻿.s0
+{
+    border: 0px solid #000000;
+    margin-top: 12px;
+    padding-left: 12px;
+    font-size: 10pt;
+    color: #7a7a7a;
+}
+
+.s1
+{
+    width: 400px;
+    border: 1px solid #000000;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    padding-left:10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 55px;
+}
+
+.s2
+{
+    width: 150px;
+    border: 0px solid #000000;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    float: left;
+    height: 25px;
+    padding-left: 5px;
+    padding-top: 10px;
+}
+
+.s3
+{
+    width: 700px;
+    border: 0px solid #000000;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    float: right;
+    height: 35px;
+}
+
+.s4
+{
+    width: 400px;
+    border: 1px solid #000000;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    padding-left:10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 40px;
+}
+
+.s5
+{
+    width: 150px;
+    border: 0px solid #000000;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    float: left;
+    height: 25px;
+    padding-left: 5px;
+    padding-top: 10px;
+}
+
+.s6
+{
+    width: 700px;
+    border: 0px solid #000000;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    float: right;
+    height: 35px;
+}
+
+.s7
+{
+    float: right;
+    font-weight: bold;
+    width: 100px;
+}
+
+.s8 
+{
+	width: 100px;
+    height: 30px;
+    font-size: 10pt;
+    background: #C1D82F;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    float: right;
+    font-weight: bold;
+    border: 1px solid #C1D82F;
+    color: White;
+    outline:none;
+    margin-right: 50px;
+}
+
+.s8:hover,
+.s8:active 
+{
+	border-color: #66cc00;
+	background-color: #666;
+	background-position: 0 -50px;
+	color: #FFF;
+	cursor: pointer;
+}
+
+.s9
+{
+    display: none; 
+    position: absolute;     
+    top: 500px; 
+    left: 730px;
+    text-align: left;
+    width: 120px; 
+    height: 30px; 
+    border: 3px solid #C1D82F;
+    background-color: #FDFEFF;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.s10
+{
+    text-align: left;
+    padding-left: 8px;
+    font-size: 9pt;
+    color: #FF9B37; /*6666FF*/
+}
+
+.s11
+{
+    margin-top: 3px;
+    margin-left: 1px;
+}
+
+

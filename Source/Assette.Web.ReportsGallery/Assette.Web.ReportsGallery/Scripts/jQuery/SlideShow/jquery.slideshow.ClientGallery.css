@@ -1,0 +1,235 @@
+﻿ #slideshow
+{
+    margin: 0 auto;
+    width: 700px;
+    height: 460px;
+    position: relative;
+    border: 0px solid red;
+}
+        
+#slideshow #slidesContainer
+{
+    margin: 0 auto;
+    width: 700px;
+    height: 480px;
+    overflow: auto; /* allow scrollbar */
+    position: relative;
+    border: 0px solid red;
+}
+        
+#slideshow #slidesContainer .slide
+{
+    margin: 0 auto;
+    width: 700px; /* reduce by 20 pixels of #slidesContainer to avoid horizontal scroll */
+    height: 360px;
+    border: 0px solid blue;
+}
+        
+.control
+{
+    display: block;
+    width: 40px;
+    height: 360px;
+    text-indent: -10000px;
+    position: absolute;
+    cursor: pointer;
+}
+        
+#leftControl
+{
+    top: 0;
+    left: 0;
+    background-image: url('LeftArrow.jpg');
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    border: 0px solid #000000;
+}
+        
+#rightControl
+{
+    top: 0;
+    right: 0;
+    background-image: url('RightArrow.jpg');
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    border: 0px solid #000000;
+}
+        
+        
+        
+        
+        
+.lefter
+{
+    border: 1px solid #000000;
+    width: 400px;
+    height: 450px;
+    float: left;
+}
+        
+.centre
+{
+    border: 1px solid #000000;
+    width: 20px;
+    height: 350px;
+    float: left;
+    border: 0px solid #000000;
+}
+        
+.right
+{
+    border: 0px solid #000000;
+    width: 270px; /* less 10 pixels to total width */
+    height: 350px;
+    float: left;
+    border: 0px solid #000000;
+}
+        
+.top
+{
+    width: 260px;
+    height: 250px;
+    border-top: 1px solid #000000;
+    border-right: 0px solid #000000;
+}
+        
+.bellow
+{
+    width: 260px;
+    height: 35px;    
+    border-top: 1px solid #000000;
+    /*border: 1px solid #000000;*/
+}
+        
+.maintitle
+{
+    /*font-family: arial;*/
+    font-size: 13pt;
+    color: #7a7a7a;
+    margin-top: 5px;
+    font-weight: bold;
+}
+        
+.subtitle
+{
+    /*font-family: arial;*/
+    font-size: 9pt;
+    color: #7a7a7a;
+    margin-top: 5px;
+}
+        
+.description
+{
+    /*font-family: arial;*/
+    font-size: 10pt;
+    color: #7a7a7a;
+    margin-top: 15px;
+}
+
+.notes
+{
+    width: 260px;
+    height: 170px;
+    border-bottom: 0px solid #000000;
+    /*font-family: arial;*/
+    font-size: 9pt;
+    color: #7a7a7a;
+}
+
+.addnotes
+{
+    width: 260px;
+    height: 55px;
+    border-top: 0px solid #000000;
+    padding-top: 3px;
+}
+
+#txtNote
+{
+    width: 255px;
+    height: 30px;
+}
+
+.scrollnotes
+{
+    width: 260px;
+    height: 75px;
+    border-bottom: 1px solid #000000;
+    padding: 1px;
+    overflow: auto;
+    /*background: red;*/
+}
+
+.note
+{
+    width: 215px;
+    float: left;
+    color: #000000;
+    padding: 3px;
+    border: 0px solid #000000;
+    background-color: #f7f7f7;
+}
+
+.notespace
+{
+    width: 215px;
+    float: left; 
+    height: 3px;
+}
+
+.notedelete
+{
+    width: 7px;
+    border: 0px solid #000000;
+    float: right;
+    color: #000000;
+    vertical-align: top;
+    /*font-family: arial;*/
+    font-size: 7pt;
+    /*cursor: pointer;*/
+    padding-left: 2px;
+}
+
+.notetools
+{
+    width: 260px;
+    height: 40px;
+    /*padding-top: 10px;*/
+    border-bottom: 1px solid #000000;
+    /*border: 1px solid #000000;*/
+}
+
+.notestext
+{
+    float: left;
+    /*font-family: arial;*/
+    font-size: 11pt;
+    color: #7a7a7a;
+    padding-top: 20px;
+    padding-left: 3px;
+    font-weight: bold;
+    color: #C1D82F;
+}
+
+.postnotes 
+{
+	width: 40px;
+    height: 20px;
+    /*font-family: arial;*/
+    font-size: 7pt !important; 
+    background: #C1D82F;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    float: left;
+    font-weight: bold;
+    border: 1px solid #C1D82F;
+    color: White;
+    cursor: pointer;
+    
+}
+
+.notespostdiv
+{
+    padding-top: 3px;
+}

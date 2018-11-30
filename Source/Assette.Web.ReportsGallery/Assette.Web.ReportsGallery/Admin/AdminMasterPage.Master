@@ -1,0 +1,86 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMasterPage.master.cs"
+    Inherits="Assette.Web.ReportsGallery.Admin.AdminMasterPage" %>
+
+<!DOCTYPE html>
+<html>
+<head id="Head1" runat="server">
+    <title>Assette - Gallery</title>
+    <%/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////%>
+    <%--StyleSheet Reference--%>
+    <link href="../Styles/Admin/StyleSheet_A_Master.css" rel="stylesheet" type="text/css" />
+    <link href="../Scripts/jQuery/jquery-ui/themes/base/jquery.ui.all.css" rel="stylesheet"
+        type="text/css" />
+    <%--Script Reference jquery--%>
+    <script src="../Scripts/jQuery/json2.js" type="text/javascript"></script>
+    <script src="../Scripts/jQuery/jquery-1.7.2.js" type="text/javascript"></script>
+    <%--Script Reference--%>
+    <script src="../Scripts/js/Admin/Script_A_Base.js" type="text/javascript"></script>
+    <script src="../Scripts/js/Admin/Script_A_Master.js" type="text/javascript"></script>
+    <%/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////%>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="m1">
+        <div class="m2">
+            <div class="m13">
+                <div class="m9" title="Assette © 2013">
+                    <a href="../Admin/default.aspx" style="outline: none;">
+                        <img src="../Images/AssetteLogo.png" width="299" height="113" alt="Assette" class="m15" /></a></div>
+                <div class="m11">
+                    <div title="go to client gallery" class="m21">
+                        <a id="lnkClientGalleryNewWindow" href="javascript:void(0);">
+                            <div class="ui-icon ui-icon-newwin vtip">
+                            </div>
+                        </a>
+                    </div>
+                    <div title="go to client gallery">
+                        <a id="lnkClientGallery" href="javascript:void(0);" class="m20">Client Gallery Site</a>
+                    </div>
+                    <div title="click to log-out" id="divLogout" runat="server" style="display: none">
+                        <div>
+                            <div class="m21">
+                                &nbsp;&nbsp;&nbsp;|&nbsp;</div>
+                            <asp:Button ID="btnLogout" runat="server" Text="Log Out" CssClass="m12" OnClick="btnLogout_Click" />
+                        </div>
+                    </div>
+                    <div class="m10">
+                        Welcome
+                        <asp:Label ID="lblName" runat="server" CssClass="m14"></asp:Label>&nbsp;&nbsp;&nbsp;|&nbsp;</div>
+                </div>
+            </div>
+            <div class="m7">
+                <div class="m3">
+                    <div class="m8">
+                        <ul>
+                            <li><a id="clients" href="../Admin/clients.aspx" style="outline: none;">Prospects</a></li>
+                            <li><a id="editsamplereports" href="../Admin/edit-sample-reports.aspx" style="outline: none;">
+                                Examples of Our Work</a></li>
+                            <li><a id="editreportobjects" href="../Admin/edit-report-objects.aspx" style="outline: none;">
+                                Report Objects</a></li>
+                            <li><a id="edittemplatedesigns" href="../Admin/edit-template-designs.aspx" style="outline: none;">
+                                Designs</a></li>
+                            <%--<li><a id="editreportobjectmockups" href="../Admin/edit-report-object-mockups.aspx"
+                                style="outline: none;">Mockup Objects</a></li>
+                            <li><a id="editobjectcategoryorder" href="../Admin/edit-object-category-order.aspx"
+                                style="outline: none;">Category Order</a></li>--%>
+                            <li><a id="editheadtagcontent" href="../Admin/edit-head-tag.aspx" style="outline: none;">
+                                Advanced Settings</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="m4">
+                    <asp:ContentPlaceHolder ID="Content" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <div style="clear: both">
+            </div>
+            <div class="m5">
+                <hr class="m6" />
+                Assette © 2013
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

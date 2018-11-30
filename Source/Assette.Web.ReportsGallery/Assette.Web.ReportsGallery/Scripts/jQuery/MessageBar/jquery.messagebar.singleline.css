@@ -1,0 +1,146 @@
+/*==================================red======================================*/
+.messagebar-skin-red_bar 
+{
+  color: #FFFFFF;
+  /*height:40px;*/
+  height: auto;
+  margin: 0 auto;
+  display: none;
+  width: 420px;
+  background: url(MessageBarRed.jpg) top left repeat-x; 
+  /*margin-top: 30px;*/
+  margin-top: 0px;
+  position: fixed; 
+  left: 725px;
+  top: 75px;
+}
+
+.messagebar-skin-red_text 
+{
+    font:bold 12px/40px Tahoma,Arial,Helvetica,sans-serif;
+    text-shadow:1px 1px 1px #333333;
+    padding-left:9px;
+}
+
+.messagebar-skin-red_close 
+{
+    width: 22px;
+    height: 22px;
+    float: right;
+    margin: 9px;
+    background: url(MessageBarClose.png) top left no-repeat;
+}
+
+.messagebar-skin-red_close:hover
+{
+  background-position: bottom left;
+}
+
+/*==================================orange======================================*/
+.messagebar-skin-orange_bar 
+{
+  color: #FFFFFF;
+  height:35px;
+  margin: 0 auto;
+  display: none;
+  width: 420px;
+  background: url(MessageBarOrange.jpg) top left repeat-x;
+  margin-top: 30px;
+  position: fixed; 
+  left: 725px;
+  top: 75px;
+  border: 1px solid #FF8040;
+}
+
+.messagebar-skin-orange_text 
+{
+    font:bold 12px/40px Tahoma,Arial,Helvetica,sans-serif;
+    text-shadow:1px 1px 1px #333333;
+    padding-left:9px;
+}
+
+.messagebar-skin-orange_close 
+{
+    width: 22px;
+    height: 22px;
+    float: right;
+    margin: 9px;
+    background: url(MessageBarClose.png) top left no-repeat;
+}
+
+.messagebar-skin-orange_close:hover
+{
+  background-position: bottom left;
+}
+
+/*==================================green======================================*/
+.messagebar-skin-green_bar 
+{
+  color: #FFFFFF;
+  height:35px;
+  margin: 0 auto;
+  display: none;
+  width: 420px;
+  background: url(MessageBarGreen.jpg) top left repeat-x;
+  margin-top: 30px;
+  position: fixed; 
+  left: 725px;
+  top: 75px;
+}
+
+.messagebar-skin-green_text 
+{
+    font:bold 12px/40px Tahoma,Arial,Helvetica,sans-serif;
+    text-shadow:1px 1px 1px #333333;
+    padding-left:9px;
+}
+
+.messagebar-skin-green_close 
+{
+    width: 22px;
+    height: 22px;
+    float: right;
+    margin: 9px;
+    background: url(MessageBarClose.png) top left no-repeat;
+}
+
+.messagebar-skin-green_close:hover
+{
+  background-position: bottom left;
+}
+
+/*==================================blue======================================*/
+.messagebar-skin-blue_bar 
+{
+  color: #FFFFFF;
+  height:40px;
+  margin: 0 auto;
+  display: none;
+  width: 420px;
+  background: url(MessageBarBlue.jpg) top left repeat-x;
+  margin-top: 30px;
+  position: fixed; 
+  left: 725px;
+  top: 75px;
+}
+
+.messagebar-skin-blue_text 
+{
+    font:bold 12px/40px Tahoma,Arial,Helvetica,sans-serif;
+    text-shadow:1px 1px 1px #333333;
+    padding-left:9px;
+}
+
+.messagebar-skin-blue_close 
+{
+    width: 22px;
+    height: 22px;
+    float: right;
+    margin: 9px;
+    background: url(MessageBarClose.png) top left no-repeat;
+}
+
+.messagebar-skin-blue_close:hover
+{
+  background-position: bottom left;
+}

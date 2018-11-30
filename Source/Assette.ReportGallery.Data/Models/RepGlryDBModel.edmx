@@ -1,0 +1,1390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="RepGlryModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="RepGlryModelStoreContainer">
+          <EntitySet Name="ClientConfigurations" EntityType="RepGlryModel.Store.ClientConfigurations" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GLRY_FirmTypes" EntityType="RepGlryModel.Store.GLRY_FirmTypes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GLRY_GalleryNotes" EntityType="RepGlryModel.Store.GLRY_GalleryNotes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GLRY_paObjectCategoryOrder" EntityType="RepGlryModel.Store.GLRY_paObjectCategoryOrder" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GLRY_PAObjectPreView" EntityType="RepGlryModel.Store.GLRY_PAObjectPreView" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GLRY_ProductTypes" EntityType="RepGlryModel.Store.GLRY_ProductTypes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GLRY_Prospects" EntityType="RepGlryModel.Store.GLRY_Prospects" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GLRY_ProspectsGalleryContents" EntityType="RepGlryModel.Store.GLRY_ProspectsGalleryContents" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GLRY_Roles" EntityType="RepGlryModel.Store.GLRY_Roles" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GLRY_SampleReportPages" EntityType="RepGlryModel.Store.GLRY_SampleReportPages" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GLRY_SampleReports" EntityType="RepGlryModel.Store.GLRY_SampleReports" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GLRY_TemplateDesignPages" EntityType="RepGlryModel.Store.GLRY_TemplateDesignPages" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GLRY_TemplateDesigns" EntityType="RepGlryModel.Store.GLRY_TemplateDesigns" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GLRY_Users" EntityType="RepGlryModel.Store.GLRY_Users" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GLRY_UsersInRoles" EntityType="RepGlryModel.Store.GLRY_UsersInRoles" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="paObjectCategories" EntityType="RepGlryModel.Store.paObjectCategories" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="paObjectMockups" EntityType="RepGlryModel.Store.paObjectMockups" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="paObjects" EntityType="RepGlryModel.Store.paObjects" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="paObjectTypes" EntityType="RepGlryModel.Store.paObjectTypes" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK__GLRY_User__UserI__015422C3" Association="RepGlryModel.Store.FK__GLRY_User__UserI__015422C3">
+            <End Role="GLRY_Users" EntitySet="GLRY_Users" />
+            <End Role="GLRY_UsersInRoles" EntitySet="GLRY_UsersInRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GLRY_UsersInRole__024846FC" Association="RepGlryModel.Store.FK__GLRY_UsersInRole__024846FC">
+            <End Role="GLRY_Roles" EntitySet="GLRY_Roles" />
+            <End Role="GLRY_UsersInRoles" EntitySet="GLRY_UsersInRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GLRY_Designs_GLRY_FirmTypes" Association="RepGlryModel.Store.FK_GLRY_Designs_GLRY_FirmTypes">
+            <End Role="GLRY_FirmTypes" EntitySet="GLRY_FirmTypes" />
+            <End Role="GLRY_TemplateDesigns" EntitySet="GLRY_TemplateDesigns" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GLRY_Designs_GLRY_ProductType" Association="RepGlryModel.Store.FK_GLRY_Designs_GLRY_ProductType">
+            <End Role="GLRY_ProductTypes" EntitySet="GLRY_ProductTypes" />
+            <End Role="GLRY_TemplateDesigns" EntitySet="GLRY_TemplateDesigns" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GLRY_DesignsGLRY_DesignPages" Association="RepGlryModel.Store.FK_GLRY_DesignsGLRY_DesignPages">
+            <End Role="GLRY_TemplateDesigns" EntitySet="GLRY_TemplateDesigns" />
+            <End Role="GLRY_TemplateDesignPages" EntitySet="GLRY_TemplateDesignPages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GLRY_GalleryNotes_GLRY_ProspectsGalleryContents" Association="RepGlryModel.Store.FK_GLRY_GalleryNotes_GLRY_ProspectsGalleryContents">
+            <End Role="GLRY_ProspectsGalleryContents" EntitySet="GLRY_ProspectsGalleryContents" />
+            <End Role="GLRY_GalleryNotes" EntitySet="GLRY_GalleryNotes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GLRY_paObjectCategoryOrder_paObjectCategories" Association="RepGlryModel.Store.FK_GLRY_paObjectCategoryOrder_paObjectCategories">
+            <End Role="paObjectCategories" EntitySet="paObjectCategories" />
+            <End Role="GLRY_paObjectCategoryOrder" EntitySet="GLRY_paObjectCategoryOrder" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GLRY_PAObjectPreView_paObjects" Association="RepGlryModel.Store.FK_GLRY_PAObjectPreView_paObjects">
+            <End Role="paObjects" EntitySet="paObjects" />
+            <End Role="GLRY_PAObjectPreView" EntitySet="GLRY_PAObjectPreView" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GLRY_ProspectsGalleryContents_GLRY_Prospects" Association="RepGlryModel.Store.FK_GLRY_ProspectsGalleryContents_GLRY_Prospects">
+            <End Role="GLRY_Prospects" EntitySet="GLRY_Prospects" />
+            <End Role="GLRY_ProspectsGalleryContents" EntitySet="GLRY_ProspectsGalleryContents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GLRY_SampleReports_GLRY_FirmTypes" Association="RepGlryModel.Store.FK_GLRY_SampleReports_GLRY_FirmTypes">
+            <End Role="GLRY_FirmTypes" EntitySet="GLRY_FirmTypes" />
+            <End Role="GLRY_SampleReports" EntitySet="GLRY_SampleReports" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GLRY_SampleReports_GLRY_ProductType" Association="RepGlryModel.Store.FK_GLRY_SampleReports_GLRY_ProductType">
+            <End Role="GLRY_ProductTypes" EntitySet="GLRY_ProductTypes" />
+            <End Role="GLRY_SampleReports" EntitySet="GLRY_SampleReports" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GLRY_SampleReportsGLRY_SampleReportPages" Association="RepGlryModel.Store.FK_GLRY_SampleReportsGLRY_SampleReportPages">
+            <End Role="GLRY_SampleReports" EntitySet="GLRY_SampleReports" />
+            <End Role="GLRY_SampleReportPages" EntitySet="GLRY_SampleReportPages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_paObjectMockups_paObjectCategories" Association="RepGlryModel.Store.FK_paObjectMockups_paObjectCategories">
+            <End Role="paObjectCategories" EntitySet="paObjectCategories" />
+            <End Role="paObjectMockups" EntitySet="paObjectMockups" />
+          </AssociationSet>
+          <AssociationSet Name="FK_paObjectMockups_paObjectTypes" Association="RepGlryModel.Store.FK_paObjectMockups_paObjectTypes">
+            <End Role="paObjectTypes" EntitySet="paObjectTypes" />
+            <End Role="paObjectMockups" EntitySet="paObjectMockups" />
+          </AssociationSet>
+          <AssociationSet Name="FK_paObjects_paObjectCategories" Association="RepGlryModel.Store.FK_paObjects_paObjectCategories">
+            <End Role="paObjectCategories" EntitySet="paObjectCategories" />
+            <End Role="paObjects" EntitySet="paObjects" />
+          </AssociationSet>
+          <AssociationSet Name="FK_paObjects_paObjectTypes" Association="RepGlryModel.Store.FK_paObjects_paObjectTypes">
+            <End Role="paObjectTypes" EntitySet="paObjectTypes" />
+            <End Role="paObjects" EntitySet="paObjects" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ClientConfigurations">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ParamName" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="ParamValue" Type="varchar" MaxLength="4000" />
+          <Property Name="DataType" Type="int" />
+          <Property Name="IsApplicationVariable" Type="int" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="1024" />
+        </EntityType>
+        <EntityType Name="GLRY_FirmTypes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="FirmName" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="GLRY_GalleryNotes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Note" Type="varchar" Nullable="false" MaxLength="1000" />
+          <Property Name="GalleryContentId" Type="int" Nullable="false" />
+          <Property Name="AddedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GLRY_paObjectCategoryOrder">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PaObjectCategoryId" Type="int" Nullable="false" />
+          <Property Name="SortOrder" Type="int" Nullable="false" />
+          <Property Name="IsVisible" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GLRY_PAObjectPreView">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ObjectId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GLRY_ProductTypes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="ProductName" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="GLRY_Prospects">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="LastName" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="Email" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Company" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="RegisteredIP" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="RegisteredDate" Type="datetime" Nullable="false" />
+          <Property Name="JobTitle" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="Title" Type="varchar" MaxLength="200" />
+          <Property Name="FirmAUM" Type="varchar" MaxLength="200" />
+          <Property Name="FirmType" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="GLRY_ProspectsGalleryContents">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PropsectId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ObjectId" Type="int" Nullable="false" />
+          <Property Name="AddedDate" Type="datetime" Nullable="false" />
+          <Property Name="TableType" Type="nchar" MaxLength="5" />
+        </EntityType>
+        <EntityType Name="GLRY_Roles">
+          <Key>
+            <PropertyRef Name="RoleId" />
+            <PropertyRef Name="ApplicationName" />
+          </Key>
+          <Property Name="RoleId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RoleName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ApplicationName" Type="varchar" Nullable="false" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="GLRY_SampleReportPages">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PageNo" Type="smallint" Nullable="false" />
+          <Property Name="PageImage" Type="varbinary(max)" Nullable="false" />
+          <Property Name="Thumbnail" Type="varbinary(max)" Nullable="false" />
+          <Property Name="ViewCount" Type="int" Nullable="false" />
+          <Property Name="SampleReportId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GLRY_SampleReports">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PresentationFile" Type="varbinary(max)" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="1000" />
+          <Property Name="ShortDescription" Type="nvarchar" Nullable="false" MaxLength="1000" />
+          <Property Name="LongDescription" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="UploadedDate" Type="datetime" Nullable="false" />
+          <Property Name="UploadedBy" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ViewCount" Type="int" Nullable="false" />
+          <Property Name="FirmType" Type="int" Nullable="false" />
+          <Property Name="ProductType" Type="int" Nullable="false" />
+          <Property Name="PreRegisterPreView" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GLRY_TemplateDesignPages">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PageNo" Type="smallint" Nullable="false" />
+          <Property Name="PageImage" Type="varbinary(max)" Nullable="false" />
+          <Property Name="Thumbnail" Type="varbinary(max)" Nullable="false" />
+          <Property Name="ViewCount" Type="int" Nullable="false" />
+          <Property Name="TemplateDesignId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GLRY_TemplateDesigns">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PresentationFile" Type="varbinary(max)" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="1000" />
+          <Property Name="ShortDescription" Type="nvarchar" Nullable="false" MaxLength="1000" />
+          <Property Name="LongDescription" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="UploadedDate" Type="datetime" Nullable="false" />
+          <Property Name="UploadedBy" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ViewCount" Type="int" Nullable="false" />
+          <Property Name="FirmType" Type="int" Nullable="false" />
+          <Property Name="ProductType" Type="int" Nullable="false" />
+          <Property Name="PreRegisterPreView" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GLRY_Users">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ApplicationName" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Email" Type="varchar" Nullable="false" MaxLength="128" />
+          <Property Name="Password" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="IsApproved" Type="bit" Nullable="false" />
+          <Property Name="LastLoginDate" Type="datetime" />
+          <Property Name="RegisteredDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GLRY_UsersInRoles">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="RoleId" />
+            <PropertyRef Name="ApplicationName" />
+          </Key>
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="RoleId" Type="int" Nullable="false" />
+          <Property Name="ApplicationName" Type="varchar" Nullable="false" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="paObjectCategories">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Category" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="Prefix" Type="varchar" Nullable="false" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="paObjectMockups">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" MaxLength="100" />
+          <Property Name="ObjectCategoryID" Type="int" />
+          <Property Name="ObjectTypeID" Type="int" />
+          <Property Name="Description" Type="varchar" MaxLength="4000" />
+          <Property Name="ClientType" Type="varchar" MaxLength="20" />
+          <Property Name="ObjectImage" Type="image" />
+          <Property Name="ObjectThumbnail" Type="image" />
+          <Property Name="PreRegisterPreView" Type="bit" />
+          <Property Name="ViewCount" Type="int" />
+          <Property Name="UploadedDate" Type="datetime" />
+          <Property Name="UploadedBy" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="paObjects">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" MaxLength="100" />
+          <Property Name="ObjectTypeID" Type="int" />
+          <Property Name="ParamsXML" Type="varchar" MaxLength="1000" />
+          <Property Name="SPName" Type="varchar" MaxLength="50" />
+          <Property Name="ObjectXML" Type="ntext" />
+          <Property Name="PropertyXML" Type="ntext" />
+          <Property Name="NodeValue" Type="varchar" />
+          <Property Name="FormatXML" Type="varchar(max)" />
+          <Property Name="ObjectTag" Type="varchar" MaxLength="500" />
+          <Property Name="TransformXSL" Type="ntext" />
+          <Property Name="BinaryImage" Type="image" />
+          <Property Name="Height" Type="int" />
+          <Property Name="Width" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="PowerPointFile" Type="varbinary(max)" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="ModifiedBy" Type="int" />
+          <Property Name="DeletedBy" Type="int" />
+          <Property Name="DeletedDate" Type="datetime" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="Version" Type="varchar" MaxLength="50" />
+          <Property Name="ObjectCategoryID" Type="int" />
+          <Property Name="Description" Type="varchar" MaxLength="4000" />
+          <Property Name="ObjectID" Type="varchar" MaxLength="100" />
+          <Property Name="ObjectPackID" Type="int" />
+          <Property Name="ObjectPackGuid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ObjectImage" Type="image" />
+          <Property Name="ObjectThumbnail" Type="image" />
+          <Property Name="ClientType" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="paObjectTypes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Type" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK__GLRY_User__UserI__015422C3">
+          <End Role="GLRY_Users" Type="RepGlryModel.Store.GLRY_Users" Multiplicity="1" />
+          <End Role="GLRY_UsersInRoles" Type="RepGlryModel.Store.GLRY_UsersInRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GLRY_Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="GLRY_UsersInRoles">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GLRY_UsersInRole__024846FC">
+          <End Role="GLRY_Roles" Type="RepGlryModel.Store.GLRY_Roles" Multiplicity="1" />
+          <End Role="GLRY_UsersInRoles" Type="RepGlryModel.Store.GLRY_UsersInRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GLRY_Roles">
+              <PropertyRef Name="RoleId" />
+              <PropertyRef Name="ApplicationName" />
+            </Principal>
+            <Dependent Role="GLRY_UsersInRoles">
+              <PropertyRef Name="RoleId" />
+              <PropertyRef Name="ApplicationName" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GLRY_Designs_GLRY_FirmTypes">
+          <End Role="GLRY_FirmTypes" Type="RepGlryModel.Store.GLRY_FirmTypes" Multiplicity="1" />
+          <End Role="GLRY_TemplateDesigns" Type="RepGlryModel.Store.GLRY_TemplateDesigns" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GLRY_FirmTypes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GLRY_TemplateDesigns">
+              <PropertyRef Name="FirmType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GLRY_Designs_GLRY_ProductType">
+          <End Role="GLRY_ProductTypes" Type="RepGlryModel.Store.GLRY_ProductTypes" Multiplicity="1" />
+          <End Role="GLRY_TemplateDesigns" Type="RepGlryModel.Store.GLRY_TemplateDesigns" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GLRY_ProductTypes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GLRY_TemplateDesigns">
+              <PropertyRef Name="ProductType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GLRY_DesignsGLRY_DesignPages">
+          <End Role="GLRY_TemplateDesigns" Type="RepGlryModel.Store.GLRY_TemplateDesigns" Multiplicity="1" />
+          <End Role="GLRY_TemplateDesignPages" Type="RepGlryModel.Store.GLRY_TemplateDesignPages" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GLRY_TemplateDesigns">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GLRY_TemplateDesignPages">
+              <PropertyRef Name="TemplateDesignId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GLRY_GalleryNotes_GLRY_ProspectsGalleryContents">
+          <End Role="GLRY_ProspectsGalleryContents" Type="RepGlryModel.Store.GLRY_ProspectsGalleryContents" Multiplicity="1" />
+          <End Role="GLRY_GalleryNotes" Type="RepGlryModel.Store.GLRY_GalleryNotes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GLRY_ProspectsGalleryContents">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GLRY_GalleryNotes">
+              <PropertyRef Name="GalleryContentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GLRY_paObjectCategoryOrder_paObjectCategories">
+          <End Role="paObjectCategories" Type="RepGlryModel.Store.paObjectCategories" Multiplicity="1" />
+          <End Role="GLRY_paObjectCategoryOrder" Type="RepGlryModel.Store.GLRY_paObjectCategoryOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="paObjectCategories">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="GLRY_paObjectCategoryOrder">
+              <PropertyRef Name="PaObjectCategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GLRY_PAObjectPreView_paObjects">
+          <End Role="paObjects" Type="RepGlryModel.Store.paObjects" Multiplicity="1" />
+          <End Role="GLRY_PAObjectPreView" Type="RepGlryModel.Store.GLRY_PAObjectPreView" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="paObjects">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="GLRY_PAObjectPreView">
+              <PropertyRef Name="ObjectId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GLRY_ProspectsGalleryContents_GLRY_Prospects">
+          <End Role="GLRY_Prospects" Type="RepGlryModel.Store.GLRY_Prospects" Multiplicity="1" />
+          <End Role="GLRY_ProspectsGalleryContents" Type="RepGlryModel.Store.GLRY_ProspectsGalleryContents" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GLRY_Prospects">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GLRY_ProspectsGalleryContents">
+              <PropertyRef Name="PropsectId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GLRY_SampleReports_GLRY_FirmTypes">
+          <End Role="GLRY_FirmTypes" Type="RepGlryModel.Store.GLRY_FirmTypes" Multiplicity="1" />
+          <End Role="GLRY_SampleReports" Type="RepGlryModel.Store.GLRY_SampleReports" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GLRY_FirmTypes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GLRY_SampleReports">
+              <PropertyRef Name="FirmType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GLRY_SampleReports_GLRY_ProductType">
+          <End Role="GLRY_ProductTypes" Type="RepGlryModel.Store.GLRY_ProductTypes" Multiplicity="1" />
+          <End Role="GLRY_SampleReports" Type="RepGlryModel.Store.GLRY_SampleReports" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GLRY_ProductTypes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GLRY_SampleReports">
+              <PropertyRef Name="ProductType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GLRY_SampleReportsGLRY_SampleReportPages">
+          <End Role="GLRY_SampleReports" Type="RepGlryModel.Store.GLRY_SampleReports" Multiplicity="1" />
+          <End Role="GLRY_SampleReportPages" Type="RepGlryModel.Store.GLRY_SampleReportPages" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GLRY_SampleReports">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GLRY_SampleReportPages">
+              <PropertyRef Name="SampleReportId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_paObjectMockups_paObjectCategories">
+          <End Role="paObjectCategories" Type="RepGlryModel.Store.paObjectCategories" Multiplicity="0..1" />
+          <End Role="paObjectMockups" Type="RepGlryModel.Store.paObjectMockups" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="paObjectCategories">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="paObjectMockups">
+              <PropertyRef Name="ObjectCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_paObjectMockups_paObjectTypes">
+          <End Role="paObjectTypes" Type="RepGlryModel.Store.paObjectTypes" Multiplicity="0..1" />
+          <End Role="paObjectMockups" Type="RepGlryModel.Store.paObjectMockups" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="paObjectTypes">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="paObjectMockups">
+              <PropertyRef Name="ObjectTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_paObjects_paObjectCategories">
+          <End Role="paObjectCategories" Type="RepGlryModel.Store.paObjectCategories" Multiplicity="0..1" />
+          <End Role="paObjects" Type="RepGlryModel.Store.paObjects" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="paObjectCategories">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="paObjects">
+              <PropertyRef Name="ObjectCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_paObjects_paObjectTypes">
+          <End Role="paObjectTypes" Type="RepGlryModel.Store.paObjectTypes" Multiplicity="0..1" />
+          <End Role="paObjects" Type="RepGlryModel.Store.paObjects" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="paObjectTypes">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="paObjects">
+              <PropertyRef Name="ObjectTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RepGlryModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="RepGlryEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="PAObjectCategories1" EntityType="RepGlryModel.PAObjectCategory" />
+          <EntitySet Name="PAObjectTypes1" EntityType="RepGlryModel.PAObjectType" />
+          <EntitySet Name="FirmTypes" EntityType="RepGlryModel.FirmTypes" />
+          <EntitySet Name="SampleReports" EntityType="RepGlryModel.SampleReports" />
+          <AssociationSet Name="FK_GLRY_SampleReports_GLRY_FirmTypes" Association="RepGlryModel.FK_GLRY_SampleReports_GLRY_FirmTypes">
+            <End Role="GLRY_FirmTypes" EntitySet="FirmTypes" />
+            <End Role="GLRY_SampleReports" EntitySet="SampleReports" />
+          </AssociationSet>
+          <EntitySet Name="Prospects" EntityType="RepGlryModel.Prospects" />
+          <EntitySet Name="ProductTypes" EntityType="RepGlryModel.ProductTypes" />
+          <AssociationSet Name="FK_GLRY_SampleReports_GLRY_ProductType" Association="RepGlryModel.FK_GLRY_SampleReports_GLRY_ProductType">
+            <End Role="GLRY_ProductTypes" EntitySet="ProductTypes" />
+            <End Role="SampleReports" EntitySet="SampleReports" />
+          </AssociationSet>
+          <EntitySet Name="TemplateDesigns" EntityType="RepGlryModel.TemplateDesigns" />
+          <AssociationSet Name="FK_GLRY_Designs_GLRY_FirmTypes" Association="RepGlryModel.FK_GLRY_Designs_GLRY_FirmTypes">
+            <End Role="FirmTypes" EntitySet="FirmTypes" />
+            <End Role="GLRY_TemplateDesigns" EntitySet="TemplateDesigns" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GLRY_Designs_GLRY_ProductType" Association="RepGlryModel.FK_GLRY_Designs_GLRY_ProductType">
+            <End Role="ProductTypes" EntitySet="ProductTypes" />
+            <End Role="GLRY_TemplateDesigns" EntitySet="TemplateDesigns" />
+          </AssociationSet>
+          <EntitySet Name="SampleReportPages" EntityType="RepGlryModel.SampleReportPages" />
+          <EntitySet Name="TemplateDesignPages" EntityType="RepGlryModel.TemplateDesignPages" />
+          <AssociationSet Name="FK_GLRY_SampleReportsGLRY_SampleReportPages" Association="RepGlryModel.FK_GLRY_SampleReportsGLRY_SampleReportPages">
+            <End Role="SampleReports" EntitySet="SampleReports" />
+            <End Role="GLRY_SampleReportPages" EntitySet="SampleReportPages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GLRY_DesignsGLRY_DesignPages" Association="RepGlryModel.FK_GLRY_DesignsGLRY_DesignPages">
+            <End Role="TemplateDesigns" EntitySet="TemplateDesigns" />
+            <End Role="GLRY_TemplateDesignPages" EntitySet="TemplateDesignPages" />
+          </AssociationSet>
+          <EntitySet Name="PAObjects1" EntityType="RepGlryModel.PAObject" />
+          <AssociationSet Name="FK_paObjects_paObjectCategories" Association="RepGlryModel.FK_paObjects_paObjectCategories">
+            <End Role="PAObjectCategory" EntitySet="PAObjectCategories1" />
+            <End Role="paObject" EntitySet="PAObjects1" />
+          </AssociationSet>
+          <AssociationSet Name="FK_paObjects_paObjectTypes" Association="RepGlryModel.FK_paObjects_paObjectTypes">
+            <End Role="PAObjectType" EntitySet="PAObjectTypes1" />
+            <End Role="paObject" EntitySet="PAObjects1" />
+          </AssociationSet>
+          <EntitySet Name="GalleryNotes" EntityType="RepGlryModel.GalleryNotes" />
+          <EntitySet Name="Roles" EntityType="RepGlryModel.Roles" />
+          <EntitySet Name="Users" EntityType="RepGlryModel.Users" />
+          <AssociationSet Name="GLRY_UsersInRoles" Association="RepGlryModel.GLRY_UsersInRoles">
+            <End Role="GLRY_Users" EntitySet="Users" />
+            <End Role="GLRY_Roles" EntitySet="Roles" />
+          </AssociationSet>
+          <EntitySet Name="PAObjectPreViews" EntityType="RepGlryModel.PAObjectPreView" />
+          <AssociationSet Name="FK_GLRY_PAObjectPreView_paObjects" Association="RepGlryModel.FK_GLRY_PAObjectPreView_paObjects">
+            <End Role="PAObject" EntitySet="PAObjects1" />
+            <End Role="GLRY_PAObjectPreView" EntitySet="PAObjectPreViews" />
+          </AssociationSet>
+          <EntitySet Name="PAObjectMockups1" EntityType="RepGlryModel.PAObjectMockup" />
+          <AssociationSet Name="FK_paObjectMockups_paObjectCategories" Association="RepGlryModel.FK_paObjectMockups_paObjectCategories">
+            <End Role="PAObjectCategory" EntitySet="PAObjectCategories1" />
+            <End Role="paObjectMockup" EntitySet="PAObjectMockups1" />
+          </AssociationSet>
+          <AssociationSet Name="FK_paObjectMockups_paObjectTypes" Association="RepGlryModel.FK_paObjectMockups_paObjectTypes">
+            <End Role="PAObjectType" EntitySet="PAObjectTypes1" />
+            <End Role="paObjectMockup" EntitySet="PAObjectMockups1" />
+          </AssociationSet>
+          <EntitySet Name="PAObjectCategoryOrders" EntityType="RepGlryModel.PAObjectCategoryOrder" />
+          <AssociationSet Name="FK_GLRY_paObjectCategoryOrder_paObjectCategories" Association="RepGlryModel.FK_GLRY_paObjectCategoryOrder_paObjectCategories">
+            <End Role="PAObjectCategory" EntitySet="PAObjectCategories1" />
+            <End Role="GLRY_paObjectCategoryOrder" EntitySet="PAObjectCategoryOrders" />
+          </AssociationSet>
+          <EntitySet Name="ProspectsGalleryContents" EntityType="RepGlryModel.ProspectsGalleryContents" />
+          <AssociationSet Name="FK_GLRY_GalleryNotes_GLRY_ProspectsGalleryContents" Association="RepGlryModel.FK_GLRY_GalleryNotes_GLRY_ProspectsGalleryContents">
+            <End Role="GLRY_ProspectsGalleryContents" EntitySet="ProspectsGalleryContents" />
+            <End Role="GalleryNotes" EntitySet="GalleryNotes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GLRY_ProspectsGalleryContents_GLRY_Prospects" Association="RepGlryModel.FK_GLRY_ProspectsGalleryContents_GLRY_Prospects">
+            <End Role="Prospects" EntitySet="Prospects" />
+            <End Role="GLRY_ProspectsGalleryContents" EntitySet="ProspectsGalleryContents" />
+          </AssociationSet>
+          <EntitySet Name="ClientConfigurations" EntityType="RepGlryModel.ClientConfiguration" />
+          </EntityContainer>
+        <EntityType Name="PAObjectCategory">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Category" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Prefix" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="paObjects" Relationship="RepGlryModel.FK_paObjects_paObjectCategories" FromRole="PAObjectCategory" ToRole="paObject" />
+          <NavigationProperty Name="paObjectMockups" Relationship="RepGlryModel.FK_paObjectMockups_paObjectCategories" FromRole="PAObjectCategory" ToRole="paObjectMockup" />
+          <NavigationProperty Name="GLRY_paObjectCategoryOrder" Relationship="RepGlryModel.FK_GLRY_paObjectCategoryOrder_paObjectCategories" FromRole="PAObjectCategory" ToRole="GLRY_paObjectCategoryOrder" />
+          </EntityType>
+        <EntityType Name="PAObjectType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Type" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="paObjects" Relationship="RepGlryModel.FK_paObjects_paObjectTypes" FromRole="PAObjectType" ToRole="paObject" />
+          <NavigationProperty Name="paObjectMockups" Relationship="RepGlryModel.FK_paObjectMockups_paObjectTypes" FromRole="PAObjectType" ToRole="paObjectMockup" />
+        </EntityType>
+        <EntityType Name="FirmTypes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="FirmName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="GLRY_SampleReports" Relationship="RepGlryModel.FK_GLRY_SampleReports_GLRY_FirmTypes" FromRole="GLRY_FirmTypes" ToRole="GLRY_SampleReports" />
+          <NavigationProperty Name="GLRY_TemplateDesigns" Relationship="RepGlryModel.FK_GLRY_Designs_GLRY_FirmTypes" FromRole="FirmTypes" ToRole="GLRY_TemplateDesigns" />
+        </EntityType>
+        <EntityType Name="SampleReports">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Binary" Name="PresentationFile" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ShortDescription" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LongDescription" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="UploadedDate" Nullable="false" />
+          <Property Type="Guid" Name="UploadedBy" Nullable="false" />
+          <Property Type="Int32" Name="ViewCount" Nullable="false" />
+          <Property Type="Int32" Name="FirmType" Nullable="false" />
+          <Property Type="Int32" Name="ProductType" Nullable="false" />
+          <NavigationProperty Name="GLRY_FirmTypes" Relationship="RepGlryModel.FK_GLRY_SampleReports_GLRY_FirmTypes" FromRole="GLRY_SampleReports" ToRole="GLRY_FirmTypes" />
+          <NavigationProperty Name="GLRY_ProductTypes" Relationship="RepGlryModel.FK_GLRY_SampleReports_GLRY_ProductType" FromRole="SampleReports" ToRole="GLRY_ProductTypes" />
+          <NavigationProperty Name="GLRY_SampleReportPages" Relationship="RepGlryModel.FK_GLRY_SampleReportsGLRY_SampleReportPages" FromRole="SampleReports" ToRole="GLRY_SampleReportPages" />
+          <Property Type="Boolean" Name="PreRegisterPreView" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_GLRY_SampleReports_GLRY_FirmTypes">
+          <End Type="RepGlryModel.FirmTypes" Role="GLRY_FirmTypes" Multiplicity="1" />
+          <End Type="RepGlryModel.SampleReports" Role="GLRY_SampleReports" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GLRY_FirmTypes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GLRY_SampleReports">
+              <PropertyRef Name="FirmType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Prospects">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" />
+          <Property Type="String" Name="FirstName" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LastName" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Email" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Company" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RegisteredIP" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="RegisteredDate" Nullable="false" />
+          <Property Type="String" Name="JobTitle" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="GLRY_ProspectsGalleryContents" Relationship="RepGlryModel.FK_GLRY_ProspectsGalleryContents_GLRY_Prospects" FromRole="Prospects" ToRole="GLRY_ProspectsGalleryContents" />
+          <Property Type="String" Name="Title" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FirmAUM" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FirmType" MaxLength="200" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ProductTypes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="ProductName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="GLRY_SampleReports" Relationship="RepGlryModel.FK_GLRY_SampleReports_GLRY_ProductType" FromRole="GLRY_ProductTypes" ToRole="SampleReports" />
+          <NavigationProperty Name="GLRY_TemplateDesigns" Relationship="RepGlryModel.FK_GLRY_Designs_GLRY_ProductType" FromRole="ProductTypes" ToRole="GLRY_TemplateDesigns" />
+        </EntityType>
+        <Association Name="FK_GLRY_SampleReports_GLRY_ProductType">
+          <End Type="RepGlryModel.ProductTypes" Role="GLRY_ProductTypes" Multiplicity="1" />
+          <End Type="RepGlryModel.SampleReports" Role="SampleReports" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GLRY_ProductTypes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SampleReports">
+              <PropertyRef Name="ProductType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="TemplateDesigns">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Binary" Name="PresentationFile" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ShortDescription" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LongDescription" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="UploadedDate" Nullable="false" />
+          <Property Type="Guid" Name="UploadedBy" Nullable="false" />
+          <Property Type="Int32" Name="ViewCount" Nullable="false" />
+          <Property Type="Int32" Name="FirmType" Nullable="false" />
+          <Property Type="Int32" Name="ProductType" Nullable="false" />
+          <NavigationProperty Name="GLRY_FirmTypes" Relationship="RepGlryModel.FK_GLRY_Designs_GLRY_FirmTypes" FromRole="GLRY_TemplateDesigns" ToRole="FirmTypes" />
+          <NavigationProperty Name="GLRY_ProductTypes" Relationship="RepGlryModel.FK_GLRY_Designs_GLRY_ProductType" FromRole="GLRY_TemplateDesigns" ToRole="ProductTypes" />
+          <NavigationProperty Name="GLRY_TemplateDesignPages" Relationship="RepGlryModel.FK_GLRY_DesignsGLRY_DesignPages" FromRole="TemplateDesigns" ToRole="GLRY_TemplateDesignPages" />
+          <Property Type="Boolean" Name="PreRegisterPreView" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_GLRY_Designs_GLRY_FirmTypes">
+          <End Type="RepGlryModel.FirmTypes" Role="FirmTypes" Multiplicity="1" />
+          <End Type="RepGlryModel.TemplateDesigns" Role="GLRY_TemplateDesigns" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FirmTypes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GLRY_TemplateDesigns">
+              <PropertyRef Name="FirmType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GLRY_Designs_GLRY_ProductType">
+          <End Type="RepGlryModel.ProductTypes" Role="ProductTypes" Multiplicity="1" />
+          <End Type="RepGlryModel.TemplateDesigns" Role="GLRY_TemplateDesigns" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductTypes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GLRY_TemplateDesigns">
+              <PropertyRef Name="ProductType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="SampleReportPages">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int16" Name="PageNo" Nullable="false" />
+          <Property Type="Binary" Name="PageImage" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Type="Binary" Name="Thumbnail" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Type="Int32" Name="ViewCount" Nullable="false" />
+          <Property Type="Int32" Name="SampleReportId" Nullable="false" />
+          <NavigationProperty Name="GLRY_SampleReports" Relationship="RepGlryModel.FK_GLRY_SampleReportsGLRY_SampleReportPages" FromRole="GLRY_SampleReportPages" ToRole="SampleReports" />
+        </EntityType>
+        <EntityType Name="TemplateDesignPages">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int16" Name="PageNo" Nullable="false" />
+          <Property Type="Binary" Name="PageImage" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Type="Binary" Name="Thumbnail" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Type="Int32" Name="ViewCount" Nullable="false" />
+          <Property Type="Int32" Name="TemplateDesignId" Nullable="false" />
+          <NavigationProperty Name="GLRY_TemplateDesigns" Relationship="RepGlryModel.FK_GLRY_DesignsGLRY_DesignPages" FromRole="GLRY_TemplateDesignPages" ToRole="TemplateDesigns" />
+        </EntityType>
+        <Association Name="FK_GLRY_SampleReportsGLRY_SampleReportPages">
+          <End Type="RepGlryModel.SampleReports" Role="SampleReports" Multiplicity="1" />
+          <End Type="RepGlryModel.SampleReportPages" Role="GLRY_SampleReportPages" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SampleReports">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GLRY_SampleReportPages">
+              <PropertyRef Name="SampleReportId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GLRY_DesignsGLRY_DesignPages">
+          <End Type="RepGlryModel.TemplateDesigns" Role="TemplateDesigns" Multiplicity="1" />
+          <End Type="RepGlryModel.TemplateDesignPages" Role="GLRY_TemplateDesignPages" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TemplateDesigns">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GLRY_TemplateDesignPages">
+              <PropertyRef Name="TemplateDesignId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="PAObject">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ObjectTypeID" />
+          <Property Type="String" Name="ParamsXML" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SPName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ObjectXML" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PropertyXML" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NodeValue" MaxLength="8000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FormatXML" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ObjectTag" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TransformXSL" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Binary" Name="BinaryImage" MaxLength="Max" FixedLength="false" />
+          <Property Type="Int32" Name="Height" />
+          <Property Type="Int32" Name="Width" />
+          <Property Type="DateTime" Name="CreatedDate" />
+          <Property Type="DateTime" Name="ModifiedDate" />
+          <Property Type="Binary" Name="PowerPointFile" MaxLength="Max" FixedLength="false" />
+          <Property Type="Int32" Name="CreatedBy" />
+          <Property Type="Int32" Name="ModifiedBy" />
+          <Property Type="Int32" Name="DeletedBy" />
+          <Property Type="DateTime" Name="DeletedDate" />
+          <Property Type="Boolean" Name="IsDeleted" Nullable="false" />
+          <Property Type="String" Name="Version" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ObjectCategoryID" />
+          <Property Type="String" Name="Description" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ObjectID" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ObjectPackID" />
+          <Property Type="Guid" Name="ObjectPackGuid" Nullable="false" />
+          <Property Type="Binary" Name="ObjectImage" MaxLength="Max" FixedLength="false" />
+          <Property Type="Binary" Name="ObjectThumbnail" MaxLength="Max" FixedLength="false" />
+          <Property Type="String" Name="ClientType" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="paObjectCategory" Relationship="RepGlryModel.FK_paObjects_paObjectCategories" FromRole="paObject" ToRole="PAObjectCategory" />
+          <NavigationProperty Name="paObjectType" Relationship="RepGlryModel.FK_paObjects_paObjectTypes" FromRole="paObject" ToRole="PAObjectType" />
+          <NavigationProperty Name="GLRY_PAObjectPreView" Relationship="RepGlryModel.FK_GLRY_PAObjectPreView_paObjects" FromRole="PAObject" ToRole="GLRY_PAObjectPreView" />
+        </EntityType>
+        <Association Name="FK_paObjects_paObjectCategories">
+          <End Type="RepGlryModel.PAObjectCategory" Role="PAObjectCategory" Multiplicity="0..1" />
+          <End Type="RepGlryModel.PAObject" Role="paObject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PAObjectCategory">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="paObject">
+              <PropertyRef Name="ObjectCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_paObjects_paObjectTypes">
+          <End Type="RepGlryModel.PAObjectType" Role="PAObjectType" Multiplicity="0..1" />
+          <End Type="RepGlryModel.PAObject" Role="paObject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PAObjectType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="paObject">
+              <PropertyRef Name="ObjectTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="GalleryNotes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Note" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="GalleryContentId" Nullable="false" />
+          <Property Type="DateTime" Name="AddedDate" Nullable="false" />
+          <NavigationProperty Name="GLRY_ProspectsGalleryContents" Relationship="RepGlryModel.FK_GLRY_GalleryNotes_GLRY_ProspectsGalleryContents" FromRole="GalleryNotes" ToRole="GLRY_ProspectsGalleryContents" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="RoleId" />
+            <PropertyRef Name="ApplicationName" />
+          </Key>
+          <Property Type="Int32" Name="RoleId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="RoleName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ApplicationName" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="GLRY_Users" Relationship="RepGlryModel.GLRY_UsersInRoles" FromRole="GLRY_Roles" ToRole="GLRY_Users" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Type="Int32" Name="UserId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ApplicationName" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Email" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="IsApproved" Nullable="false" />
+          <Property Type="DateTime" Name="LastLoginDate" />
+          <Property Type="DateTime" Name="RegisteredDate" Nullable="false" />
+          <NavigationProperty Name="GLRY_Roles" Relationship="RepGlryModel.GLRY_UsersInRoles" FromRole="GLRY_Users" ToRole="GLRY_Roles" />
+        </EntityType>
+        <Association Name="GLRY_UsersInRoles">
+          <End Type="RepGlryModel.Users" Role="GLRY_Users" Multiplicity="*" />
+          <End Type="RepGlryModel.Roles" Role="GLRY_Roles" Multiplicity="*" />
+        </Association>
+        <EntityType Name="PAObjectPreView">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="ObjectId" Nullable="false" />
+          <NavigationProperty Name="paObject" Relationship="RepGlryModel.FK_GLRY_PAObjectPreView_paObjects" FromRole="GLRY_PAObjectPreView" ToRole="PAObject" />
+        </EntityType>
+        <Association Name="FK_GLRY_PAObjectPreView_paObjects">
+          <End Type="RepGlryModel.PAObject" Role="PAObject" Multiplicity="1" />
+          <End Type="RepGlryModel.PAObjectPreView" Role="GLRY_PAObjectPreView" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PAObject">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="GLRY_PAObjectPreView">
+              <PropertyRef Name="ObjectId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="PAObjectMockup">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ObjectCategoryID" />
+          <Property Type="Int32" Name="ObjectTypeID" />
+          <Property Type="String" Name="Description" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ClientType" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Binary" Name="ObjectImage" MaxLength="Max" FixedLength="false" />
+          <Property Type="Binary" Name="ObjectThumbnail" MaxLength="Max" FixedLength="false" />
+          <Property Type="Boolean" Name="PreRegisterPreView" />
+          <Property Type="Int32" Name="ViewCount" />
+          <Property Type="DateTime" Name="UploadedDate" />
+          <Property Type="Guid" Name="UploadedBy" />
+          <NavigationProperty Name="paObjectCategory" Relationship="RepGlryModel.FK_paObjectMockups_paObjectCategories" FromRole="paObjectMockup" ToRole="PAObjectCategory" />
+          <NavigationProperty Name="paObjectType" Relationship="RepGlryModel.FK_paObjectMockups_paObjectTypes" FromRole="paObjectMockup" ToRole="PAObjectType" />
+        </EntityType>
+        <Association Name="FK_paObjectMockups_paObjectCategories">
+          <End Type="RepGlryModel.PAObjectCategory" Role="PAObjectCategory" Multiplicity="0..1" />
+          <End Type="RepGlryModel.PAObjectMockup" Role="paObjectMockup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PAObjectCategory">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="paObjectMockup">
+              <PropertyRef Name="ObjectCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_paObjectMockups_paObjectTypes">
+          <End Type="RepGlryModel.PAObjectType" Role="PAObjectType" Multiplicity="0..1" />
+          <End Type="RepGlryModel.PAObjectMockup" Role="paObjectMockup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PAObjectType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="paObjectMockup">
+              <PropertyRef Name="ObjectTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="PAObjectCategoryOrder">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="PaObjectCategoryId" Nullable="false" />
+          <Property Type="Int32" Name="SortOrder" Nullable="false" />
+          <Property Type="Boolean" Name="IsVisible" Nullable="false" />
+          <NavigationProperty Name="paObjectCategory" Relationship="RepGlryModel.FK_GLRY_paObjectCategoryOrder_paObjectCategories" FromRole="GLRY_paObjectCategoryOrder" ToRole="PAObjectCategory" />
+        </EntityType>
+        <Association Name="FK_GLRY_paObjectCategoryOrder_paObjectCategories">
+          <End Type="RepGlryModel.PAObjectCategory" Role="PAObjectCategory" Multiplicity="1" />
+          <End Type="RepGlryModel.PAObjectCategoryOrder" Role="GLRY_paObjectCategoryOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PAObjectCategory">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="GLRY_paObjectCategoryOrder">
+              <PropertyRef Name="PaObjectCategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ProspectsGalleryContents">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Guid" Name="PropsectId" Nullable="false" />
+          <Property Type="Int32" Name="ObjectId" Nullable="false" />
+          <Property Type="DateTime" Name="AddedDate" Nullable="false" />
+          <Property Type="String" Name="TableType" MaxLength="5" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="GLRY_GalleryNotes" Relationship="RepGlryModel.FK_GLRY_GalleryNotes_GLRY_ProspectsGalleryContents" FromRole="GLRY_ProspectsGalleryContents" ToRole="GalleryNotes" />
+          <NavigationProperty Name="GLRY_Prospects" Relationship="RepGlryModel.FK_GLRY_ProspectsGalleryContents_GLRY_Prospects" FromRole="GLRY_ProspectsGalleryContents" ToRole="Prospects" />
+        </EntityType>
+        <Association Name="FK_GLRY_GalleryNotes_GLRY_ProspectsGalleryContents">
+          <End Type="RepGlryModel.ProspectsGalleryContents" Role="GLRY_ProspectsGalleryContents" Multiplicity="1" />
+          <End Type="RepGlryModel.GalleryNotes" Role="GalleryNotes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GLRY_ProspectsGalleryContents">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GalleryNotes">
+              <PropertyRef Name="GalleryContentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GLRY_ProspectsGalleryContents_GLRY_Prospects">
+          <End Type="RepGlryModel.Prospects" Role="Prospects" Multiplicity="1" />
+          <End Type="RepGlryModel.ProspectsGalleryContents" Role="GLRY_ProspectsGalleryContents" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Prospects">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GLRY_ProspectsGalleryContents">
+              <PropertyRef Name="PropsectId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ClientConfiguration">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ParamName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ParamValue" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="DataType" />
+          <Property Type="Int32" Name="IsApplicationVariable" Nullable="false" />
+          <Property Type="String" Name="Description" MaxLength="1024" FixedLength="false" Unicode="false" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RepGlryModelStoreContainer" CdmEntityContainer="RepGlryEntities">
+          <EntitySetMapping Name="PAObjectCategories1">
+            <EntityTypeMapping TypeName="RepGlryModel.PAObjectCategory">
+              <MappingFragment StoreEntitySet="paObjectCategories">
+                <ScalarProperty Name="Prefix" ColumnName="Prefix" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PAObjectTypes1">
+            <EntityTypeMapping TypeName="RepGlryModel.PAObjectType">
+              <MappingFragment StoreEntitySet="paObjectTypes">
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FirmTypes">
+            <EntityTypeMapping TypeName="RepGlryModel.FirmTypes">
+              <MappingFragment StoreEntitySet="GLRY_FirmTypes">
+                <ScalarProperty Name="FirmName" ColumnName="FirmName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SampleReports">
+            <EntityTypeMapping TypeName="RepGlryModel.SampleReports">
+              <MappingFragment StoreEntitySet="GLRY_SampleReports">
+                <ScalarProperty Name="PreRegisterPreView" ColumnName="PreRegisterPreView" />
+                <ScalarProperty Name="ProductType" ColumnName="ProductType" />
+                <ScalarProperty Name="FirmType" ColumnName="FirmType" />
+                <ScalarProperty Name="ViewCount" ColumnName="ViewCount" />
+                <ScalarProperty Name="UploadedBy" ColumnName="UploadedBy" />
+                <ScalarProperty Name="UploadedDate" ColumnName="UploadedDate" />
+                <ScalarProperty Name="LongDescription" ColumnName="LongDescription" />
+                <ScalarProperty Name="ShortDescription" ColumnName="ShortDescription" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="PresentationFile" ColumnName="PresentationFile" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Prospects">
+            <EntityTypeMapping TypeName="RepGlryModel.Prospects">
+              <MappingFragment StoreEntitySet="GLRY_Prospects">
+                <ScalarProperty Name="FirmType" ColumnName="FirmType" />
+                <ScalarProperty Name="FirmAUM" ColumnName="FirmAUM" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+                <ScalarProperty Name="RegisteredDate" ColumnName="RegisteredDate" />
+                <ScalarProperty Name="RegisteredIP" ColumnName="RegisteredIP" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductTypes">
+            <EntityTypeMapping TypeName="RepGlryModel.ProductTypes">
+              <MappingFragment StoreEntitySet="GLRY_ProductTypes">
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TemplateDesigns">
+            <EntityTypeMapping TypeName="RepGlryModel.TemplateDesigns">
+              <MappingFragment StoreEntitySet="GLRY_TemplateDesigns">
+                <ScalarProperty Name="PreRegisterPreView" ColumnName="PreRegisterPreView" />
+                <ScalarProperty Name="ProductType" ColumnName="ProductType" />
+                <ScalarProperty Name="FirmType" ColumnName="FirmType" />
+                <ScalarProperty Name="ViewCount" ColumnName="ViewCount" />
+                <ScalarProperty Name="UploadedBy" ColumnName="UploadedBy" />
+                <ScalarProperty Name="UploadedDate" ColumnName="UploadedDate" />
+                <ScalarProperty Name="LongDescription" ColumnName="LongDescription" />
+                <ScalarProperty Name="ShortDescription" ColumnName="ShortDescription" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="PresentationFile" ColumnName="PresentationFile" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SampleReportPages">
+            <EntityTypeMapping TypeName="RepGlryModel.SampleReportPages">
+              <MappingFragment StoreEntitySet="GLRY_SampleReportPages">
+                <ScalarProperty Name="SampleReportId" ColumnName="SampleReportId" />
+                <ScalarProperty Name="ViewCount" ColumnName="ViewCount" />
+                <ScalarProperty Name="Thumbnail" ColumnName="Thumbnail" />
+                <ScalarProperty Name="PageImage" ColumnName="PageImage" />
+                <ScalarProperty Name="PageNo" ColumnName="PageNo" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TemplateDesignPages">
+            <EntityTypeMapping TypeName="RepGlryModel.TemplateDesignPages">
+              <MappingFragment StoreEntitySet="GLRY_TemplateDesignPages">
+                <ScalarProperty Name="TemplateDesignId" ColumnName="TemplateDesignId" />
+                <ScalarProperty Name="ViewCount" ColumnName="ViewCount" />
+                <ScalarProperty Name="Thumbnail" ColumnName="Thumbnail" />
+                <ScalarProperty Name="PageImage" ColumnName="PageImage" />
+                <ScalarProperty Name="PageNo" ColumnName="PageNo" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PAObjects1">
+            <EntityTypeMapping TypeName="RepGlryModel.PAObject">
+              <MappingFragment StoreEntitySet="paObjects">
+                <ScalarProperty Name="ClientType" ColumnName="ClientType" />
+                <ScalarProperty Name="ObjectThumbnail" ColumnName="ObjectThumbnail" />
+                <ScalarProperty Name="ObjectImage" ColumnName="ObjectImage" />
+                <ScalarProperty Name="ObjectPackGuid" ColumnName="ObjectPackGuid" />
+                <ScalarProperty Name="ObjectPackID" ColumnName="ObjectPackID" />
+                <ScalarProperty Name="ObjectID" ColumnName="ObjectID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ObjectCategoryID" ColumnName="ObjectCategoryID" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+                <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="PowerPointFile" ColumnName="PowerPointFile" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Width" ColumnName="Width" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="BinaryImage" ColumnName="BinaryImage" />
+                <ScalarProperty Name="TransformXSL" ColumnName="TransformXSL" />
+                <ScalarProperty Name="ObjectTag" ColumnName="ObjectTag" />
+                <ScalarProperty Name="FormatXML" ColumnName="FormatXML" />
+                <ScalarProperty Name="NodeValue" ColumnName="NodeValue" />
+                <ScalarProperty Name="PropertyXML" ColumnName="PropertyXML" />
+                <ScalarProperty Name="ObjectXML" ColumnName="ObjectXML" />
+                <ScalarProperty Name="SPName" ColumnName="SPName" />
+                <ScalarProperty Name="ParamsXML" ColumnName="ParamsXML" />
+                <ScalarProperty Name="ObjectTypeID" ColumnName="ObjectTypeID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GalleryNotes">
+            <EntityTypeMapping TypeName="RepGlryModel.GalleryNotes">
+              <MappingFragment StoreEntitySet="GLRY_GalleryNotes">
+                <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+                <ScalarProperty Name="GalleryContentId" ColumnName="GalleryContentId" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="RepGlryModel.Roles">
+              <MappingFragment StoreEntitySet="GLRY_Roles">
+                <ScalarProperty Name="ApplicationName" ColumnName="ApplicationName" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="RepGlryModel.Users">
+              <MappingFragment StoreEntitySet="GLRY_Users">
+                <ScalarProperty Name="RegisteredDate" ColumnName="RegisteredDate" />
+                <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+                <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="ApplicationName" ColumnName="ApplicationName" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="GLRY_UsersInRoles" TypeName="RepGlryModel.GLRY_UsersInRoles" StoreEntitySet="GLRY_UsersInRoles">
+            <EndProperty Name="GLRY_Roles">
+              <ScalarProperty Name="ApplicationName" ColumnName="ApplicationName" />
+              <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+            </EndProperty>
+            <EndProperty Name="GLRY_Users">
+              <ScalarProperty Name="UserId" ColumnName="UserId" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <EntitySetMapping Name="PAObjectPreViews">
+            <EntityTypeMapping TypeName="RepGlryModel.PAObjectPreView">
+              <MappingFragment StoreEntitySet="GLRY_PAObjectPreView">
+                <ScalarProperty Name="ObjectId" ColumnName="ObjectId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PAObjectMockups1">
+            <EntityTypeMapping TypeName="RepGlryModel.PAObjectMockup">
+              <MappingFragment StoreEntitySet="paObjectMockups">
+                <ScalarProperty Name="UploadedBy" ColumnName="UploadedBy" />
+                <ScalarProperty Name="UploadedDate" ColumnName="UploadedDate" />
+                <ScalarProperty Name="ViewCount" ColumnName="ViewCount" />
+                <ScalarProperty Name="PreRegisterPreView" ColumnName="PreRegisterPreView" />
+                <ScalarProperty Name="ObjectThumbnail" ColumnName="ObjectThumbnail" />
+                <ScalarProperty Name="ObjectImage" ColumnName="ObjectImage" />
+                <ScalarProperty Name="ClientType" ColumnName="ClientType" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ObjectTypeID" ColumnName="ObjectTypeID" />
+                <ScalarProperty Name="ObjectCategoryID" ColumnName="ObjectCategoryID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PAObjectCategoryOrders">
+            <EntityTypeMapping TypeName="RepGlryModel.PAObjectCategoryOrder">
+              <MappingFragment StoreEntitySet="GLRY_paObjectCategoryOrder">
+                <ScalarProperty Name="IsVisible" ColumnName="IsVisible" />
+                <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+                <ScalarProperty Name="PaObjectCategoryId" ColumnName="PaObjectCategoryId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProspectsGalleryContents">
+            <EntityTypeMapping TypeName="RepGlryModel.ProspectsGalleryContents">
+              <MappingFragment StoreEntitySet="GLRY_ProspectsGalleryContents">
+                <ScalarProperty Name="TableType" ColumnName="TableType" />
+                <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+                <ScalarProperty Name="ObjectId" ColumnName="ObjectId" />
+                <ScalarProperty Name="PropsectId" ColumnName="PropsectId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ClientConfigurations">
+            <EntityTypeMapping TypeName="RepGlryModel.ClientConfiguration">
+              <MappingFragment StoreEntitySet="ClientConfigurations">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IsApplicationVariable" ColumnName="IsApplicationVariable" />
+                <ScalarProperty Name="DataType" ColumnName="DataType" />
+                <ScalarProperty Name="ParamValue" ColumnName="ParamValue" />
+                <ScalarProperty Name="ParamName" ColumnName="ParamName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="RepGlryDBModel" ZoomLevel="69">
+        <EntityTypeShape EntityType="RepGlryModel.PAObjectCategory" Width="2" PointX="2.375" PointY="2.5" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="RepGlryModel.PAObjectType" Width="1.5" PointX="2.375" PointY="0.625" Height="1.5956835937500031" />
+        <EntityTypeShape EntityType="RepGlryModel.FirmTypes" Width="2.125" PointX="10.125" PointY="2.5" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="RepGlryModel.SampleReports" Width="2.125" PointX="5" PointY="4.875" Height="3.5186979166666674" />
+        <AssociationConnector Association="RepGlryModel.FK_GLRY_SampleReports_GLRY_FirmTypes" >
+          <ConnectorPoint PointX="12.03125" PointY="4.2879850260416674" />
+          <ConnectorPoint PointX="12.03125" PointY="8.2566943359375031" />
+          <ConnectorPoint PointX="11.489583333333334" PointY="8.2566943359375031" />
+          <ConnectorPoint PointX="11.322916666666666" PointY="8.2566943359375031" />
+          <ConnectorPoint PointX="7.125" PointY="8.2566943359375031" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="RepGlryModel.Prospects" Width="1.5" PointX="10.25" PointY="4.75" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="RepGlryModel.ProductTypes" Width="1.5" PointX="10.375" PointY="0.5" Height="1.7879850260416674" />
+        <AssociationConnector Association="RepGlryModel.FK_GLRY_SampleReports_GLRY_ProductType" >
+          <ConnectorPoint PointX="10.375" PointY="1.6283695130208344" />
+          <ConnectorPoint PointX="10.0625" PointY="1.6283695130208344" />
+          <ConnectorPoint PointX="10.0625" PointY="4.3984993489583326" />
+          <ConnectorPoint PointX="6.0625" PointY="4.3984993489583326" />
+          <ConnectorPoint PointX="6.0625" PointY="4.875" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="RepGlryModel.TemplateDesigns" Width="2.125" PointX="5" PointY="0.625" Height="3.5186979166666674" />
+        <AssociationConnector Association="RepGlryModel.FK_GLRY_Designs_GLRY_FirmTypes" >
+          <ConnectorPoint PointX="10.125" PointY="3.982687174479171" />
+          <ConnectorPoint PointX="7.125" PointY="3.982687174479171" />
+        </AssociationConnector>
+        <AssociationConnector Association="RepGlryModel.FK_GLRY_Designs_GLRY_ProductType" >
+          <ConnectorPoint PointX="10.375" PointY="0.90625000000000011" />
+          <ConnectorPoint PointX="7.125" PointY="0.90625000000000011" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="RepGlryModel.SampleReportPages" Width="2.125" PointX="7.875" PointY="5.5" Height="2.3648893229166745" />
+        <EntityTypeShape EntityType="RepGlryModel.TemplateDesignPages" Width="2.125" PointX="7.875" PointY="1.25" Height="2.3648893229166745" />
+        <AssociationConnector Association="RepGlryModel.FK_GLRY_SampleReportsGLRY_SampleReportPages" >
+          <ConnectorPoint PointX="7.125" PointY="6.0734592462728134" />
+          <ConnectorPoint PointX="7.875" PointY="6.0734592462728134" />
+        </AssociationConnector>
+        <AssociationConnector Association="RepGlryModel.FK_GLRY_DesignsGLRY_DesignPages" >
+          <ConnectorPoint PointX="7.125" PointY="6.4853011067708408" />
+          <ConnectorPoint PointX="7.385416666666667" PointY="6.48530110677084" />
+          <ConnectorPoint PointX="7.552083333333333" PointY="6.4853011067708408" />
+          <ConnectorPoint PointX="7.875" PointY="6.4853011067708408" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="RepGlryModel.PAObject" Width="1.5" PointX="0.5" PointY="0.625" Height="7.3647265625000031" />
+        <AssociationConnector Association="RepGlryModel.FK_paObjects_paObjectCategories" >
+          <ConnectorPoint PointX="2.375" PointY="3.5862939453125" />
+          <ConnectorPoint PointX="2" PointY="3.5862939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="RepGlryModel.FK_paObjects_paObjectTypes" >
+          <ConnectorPoint PointX="2.375" PointY="1.5189925130208333" />
+          <ConnectorPoint PointX="2" PointY="1.5189925130208333" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="RepGlryModel.GalleryNotes" Width="2.375" PointX="8.625" PointY="9" Height="1.9802864583333353" />
+        <EntityTypeShape EntityType="RepGlryModel.Roles" Width="1.5" PointX="10.625" PointY="12.875" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="RepGlryModel.Users" Width="1.5" PointX="8.375" PointY="12.5" Height="2.7494921875000031" />
+        <AssociationConnector Association="RepGlryModel.GLRY_UsersInRoles" >
+          <ConnectorPoint PointX="9.875" PointY="13.768992513020834" />
+          <ConnectorPoint PointX="10.625" PointY="13.768992513020834" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="RepGlryModel.PAObjectPreView" Width="1.875" PointX="2.375" PointY="5.5" Height="1.5956835937500031" />
+        <AssociationConnector Association="RepGlryModel.FK_GLRY_PAObjectPreView_paObjects" >
+          <ConnectorPoint PointX="2" PointY="6.2978417968750016" />
+          <ConnectorPoint PointX="2.375" PointY="6.2978417968750016" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="RepGlryModel.PAObjectMockup" Width="1.5" PointX="2.375" PointY="7.375" Height="3.7109993489583384" />
+        <AssociationConnector Association="RepGlryModel.FK_paObjectMockups_paObjectCategories" >
+          <ConnectorPoint PointX="4.333984375" PointY="4.672587890625" />
+          <ConnectorPoint PointX="4.333984375" PointY="9.23049967447917" />
+          <ConnectorPoint PointX="3.875" PointY="9.23049967447917" />
+        </AssociationConnector>
+        <AssociationConnector Association="RepGlryModel.FK_paObjectMockups_paObjectTypes" >
+          <ConnectorPoint PointX="2.375" PointY="1.9659882695312498" />
+          <ConnectorPoint PointX="2.359375" PointY="1.9659882695312498" />
+          <ConnectorPoint PointX="2.359375" PointY="7.3515625" />
+          <ConnectorPoint PointX="3.125" PointY="7.3515625" />
+          <ConnectorPoint PointX="3.125" PointY="7.375" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="RepGlryModel.PAObjectCategoryOrder" Width="2.875" PointX="0.875" PointY="11.5" Height="1.9802864583333388" />
+        <AssociationConnector Association="RepGlryModel.FK_GLRY_paObjectCategoryOrder_paObjectCategories" ManuallyRouted="false" >
+          <ConnectorPoint PointX="4.3544921875" PointY="4.672587890625" />
+          <ConnectorPoint PointX="4.3544921875" PointY="12.490143229166669" />
+          <ConnectorPoint PointX="3.75" PointY="12.490143229166669" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="RepGlryModel.ProspectsGalleryContents" Width="2.375" PointX="5.125" PointY="9" Height="2.3648893229166674" />
+        <AssociationConnector Association="RepGlryModel.FK_GLRY_GalleryNotes_GLRY_ProspectsGalleryContents" >
+          <ConnectorPoint PointX="7.5" PointY="9.9901432291666659" />
+          <ConnectorPoint PointX="8.625" PointY="9.9901432291666659" />
+        </AssociationConnector>
+        <AssociationConnector Association="RepGlryModel.FK_GLRY_ProspectsGalleryContents_GLRY_Prospects" >
+          <ConnectorPoint PointX="11.40625" PointY="7.4994921875" />
+          <ConnectorPoint PointX="11.40625" PointY="11.203837890625" />
+          <ConnectorPoint PointX="7.5" PointY="11.203837890625" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="RepGlryModel.ClientConfiguration" Width="2.25" PointX="5.25" PointY="12.5" Height="2.1725878906250031" />
+        </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

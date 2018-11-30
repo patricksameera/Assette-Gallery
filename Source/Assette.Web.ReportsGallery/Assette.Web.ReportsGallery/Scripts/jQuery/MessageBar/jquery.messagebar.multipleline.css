@@ -1,0 +1,95 @@
+/*red*/
+.messagebar-skin-red_bar
+{
+    color: #FFFFFF;
+    height: auto;
+    margin: 0 auto;
+    display: none;
+    width: 400px;
+    background: url(MessageBarRed.jpg) repeat;
+    margin-top: 0px;
+    position: fixed;
+    left: 600px;
+    top: 500px;
+    border: 0px solid #FF8040;
+    z-index: 100;
+}
+
+.messagebar-skin-red_text 
+{
+    font:bold 12px/20px Tahoma,Arial,Helvetica,sans-serif;
+    text-shadow:1px 1px 1px #333333;
+    padding-left:10px;
+    width:340px;
+    border: 0px solid #000000;
+    vertical-align: top;
+    float: left;
+    padding-bottom: 5px;
+}
+
+.messagebar-skin-red_close 
+{
+    width: 22px;
+    height: 22px;
+    float: right;
+    margin: 9px;
+    background: url(MessageBarClose.png) top left no-repeat;
+    border: 0px solid #000000;
+    cursor: pointer;
+    float: right;
+}
+
+.messagebar-skin-red_close:hover
+{
+  background-position: bottom left;
+}
+
+/*green*/
+.messagebar-skin-green_bar
+{
+    color: #FFFFFF;
+    height: auto;
+    margin: 0 auto;
+    display: none;
+    width: 400px;
+    background: url(MessageBarGreen.jpg) repeat;
+    margin-top: 0px;
+    position: fixed;
+    left: 600px;
+    top: 500px;
+    border: 0px solid #FF8040;
+}
+
+.messagebar-skin-green_text 
+{
+    font:bold 12px/20px Tahoma,Arial,Helvetica,sans-serif;
+    text-shadow:1px 1px 1px #333333;
+    padding-left:10px;
+    width:340px;
+    border: 0px solid #000000;
+    vertical-align: top;
+    float: left;
+    padding-bottom: 5px;
+}
+
+.messagebar-skin-green_close 
+{
+    width: 22px;
+    height: 22px;
+    float: right;
+    margin: 9px;
+    background: url(MessageBarClose.png) top left no-repeat;
+    border: 0px solid #000000;
+    cursor: pointer;
+    float: right;
+}
+
+.messagebar-skin-green_close:hover
+{
+  background-position: bottom left;
+}
+
+
+
+
+

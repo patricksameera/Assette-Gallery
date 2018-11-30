@@ -1,0 +1,121 @@
+﻿using System;
+using System.IO;
+using System.Net.Mail;
+using System.Reflection;
+using log4net;
+using log4net.Config;
+using log4net.Util;
+using Assette.ReportGallery.Data;
+using Assette.ReportGallery.Data.Models;
+
+#if !DEBUG
+using System.EnterpriseServices;
+using System.Runtime.InteropServices;
+using log4net;
+using log4net.Config;
+using log4net.Util;
+#endif
+
+namespace Assette.ReportGallery.Proxy
+{
+#if DEBUG
+    public class BusinessProxy : IBusinessProxy
+#else
+    [ClassInterface(ClassInterfaceType.None)]
+    public class BusinessProxy : ServicedComponent, IBusinessProxy
+#endif
+    {
+        private static readonly ILog Log = LogManager.GetLogger(typeof(BusinessProxy));
+
+        public BusinessProxy(string clientCode)
+        {
+            DataManager mngr = new DataManager(clientCode);
+        }
+
+        static BusinessProxy()
+        {
+            //LogLog.InternalDebugging = true;
+            //var log4NetConfigFilePath = string.Format("{0}.log4net", Assembly.GetExecutingAssembly().Location);
+            //XmlConfigurator.ConfigureAndWatch(new FileInfo(log4NetConfigFilePath));
+        }
+
+        public string GetConnectionString()
+        {
+            var ret = DataManager.GetConnectionString();
+
+            return ret;
+        }
+
+        public string CreateUser(string firstName, string lastName, string email, string comapany, string registeredIP)
+        {
+            string rtnVal = string.Empty;
+
+            rtnVal = DataManager.CreateUser(firstName, lastName, email, comapany, registeredIP);
+
+            return rtnVal;
+        }
+
+        public string CheckEmailExistence(string email)
+        {
+            string rtnVal = string.Empty;
+
+            rtnVal = DataManager.CheckEmailExistence(email);
+
+            return rtnVal;
+        }
+
+        public string GetUserDetailsByEmail(string email)
+        {
+            string rtnVal = string.Empty;
+
+            rtnVal = DataManager.GetUserDetailsByEmail(email);
+
+            return rtnVal;
+        }
+
+        public string GetClientDetails()
+        {
+            string rtnVal = string.Empty;
+
+            rtnVal = DataManager.GetClientDetails();
+
+            return rtnVal;
+        }
+
+        public string GetPAObjects(int pageIndex, int categoryId, int typeId, string searchText)
+        {
+            string rtnVal = string.Empty;
+
+            rtnVal = DataManager.GetPAObjects(pageIndex, categoryId, typeId, searchText);
+
+            return rtnVal;
+        }
+
+        public string GetPAObjectTypes()
+        {
+            string rtnVal = string.Empty;
+
+            rtnVal = DataManager.GetPAObjectTypes();
+
+            return rtnVal;
+        }
+
+        public string GetPAObjeCtategories()
+        {
+            string rtnVal = string.Empty;
+
+            rtnVal = DataManager.GetPAObjeCtategories();
+
+            return rtnVal;
+        }
+
+        public byte[] GetThumbnail(string Id)
+        {
+            byte[] rtnVal = new byte[0];
+
+            rtnVal = DataManager.GetThumbnail(Id);
+
+            return rtnVal;
+        }
+    }
+}

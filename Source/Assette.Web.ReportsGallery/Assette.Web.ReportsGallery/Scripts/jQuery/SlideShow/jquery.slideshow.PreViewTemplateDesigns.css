@@ -1,0 +1,132 @@
+﻿ /*
+modal dialog
+============
+modal width: 1300
+modal height: 640
+
+slider width: 1200 (modal width - 100)
+
+slider
+======
+slider width: 1200 (slider width)
+slider height: 560 (modal height - 80)
+
+slider left height: 550 (slider height - 10)
+slider left width: 800
+centre width: 25
+slider right width: 375 (slider width - slider left width - centre width)
+
+slider right top height: 360
+slider right bottom height: 200
+
+*/
+
+#slideshowTemplates
+{
+    margin: 0 auto;
+    position: relative;
+    border: 0px solid red;
+}
+        
+#slideshowTemplates #slidesContainerTemplates
+{
+    margin: 0 auto;
+    overflow: auto; 
+    position: relative;
+    border: 0px solid red;
+}
+        
+#slideshowTemplates #slidesContainerTemplates .slideTemplates
+{
+    margin: 0 auto;
+    border: 0px solid blue;
+}
+        
+.controlTemplates
+{
+    display: block;
+    text-indent: -10000px;
+    position: absolute;
+    cursor: pointer;
+}
+        
+#leftControlTemplates
+{
+    top: 0;
+    left: 0;
+    background-image: url('LeftArrow.jpg');
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    border: 0px solid #000000;
+}
+        
+#rightControlTemplates
+{
+    top: 0;
+    right: 0;
+    background-image: url('RightArrow.jpg');
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    border: 0px solid #000000;
+}
+        
+        
+        
+        
+        
+.lefterTemplates
+{    
+    border: 0px solid #000000;
+    float: left;
+}
+        
+.centerTemplates
+{
+    border: 0px solid #000000;
+    float: left;
+}
+        
+.rightTemplates
+{
+    border: 0px solid #000000;
+    float: left;
+}
+      
+      
+      
+        
+.topTemplates
+{
+    border-top: 1px solid #000000;
+    border-right: 0px solid #000000;
+}
+        
+.bellowTemplates
+{
+    border-top: 0px solid #000000;
+    border-right: 0px solid #000000;
+}
+        
+.maintitleTemplates
+{
+    font-size: 13pt;
+    color: #7a7a7a;
+    margin-top: 5px;
+    font-weight: bold;
+}
+        
+.subtitleTemplates
+{
+    font-size: 9pt;
+    color: #7a7a7a;
+    margin-top: 5px;
+}
+        
+.descriptionTemplates
+{
+    font-size: 16px;
+    color: #7a7a7a;
+    margin-top: 15px;
+    line-height: 1.8;
+    border: 0px solid #000000;
+}

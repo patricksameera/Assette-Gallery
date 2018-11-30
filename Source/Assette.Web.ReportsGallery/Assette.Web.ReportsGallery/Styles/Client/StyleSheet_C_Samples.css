@@ -1,0 +1,229 @@
+﻿.s0
+{
+    margin-top: 13px;
+    border: 0px solid #000000;
+    padding-left: 12px;
+    vertical-align: top;
+}
+
+.s1
+{
+    padding-right: 4px;
+    padding-left: 4px;
+    padding-top: 7px;
+    /*font-family: arial;*/
+    font-size: 10pt;
+    color: #7a7a7a;
+    float: left; 
+}
+
+.s2
+{
+    padding-right: 7px;
+    padding-left: 7px;
+    padding-top: 7px;
+    /*font-family: arial;*/
+    font-size: 10pt;
+    color: #7a7a7a;
+    float: left;  
+    
+}
+
+.s3
+{
+    float: left;  
+    padding-left: 20px;
+}
+
+.s4
+{
+    background-image:url('../../Images/MagnifyingGlass.jpg');
+    background-repeat:no-repeat;
+    background-position: 97% 50% ;
+    width: 160px;
+    border: 1px solid #000000;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    padding-left:10px;
+    padding-top: 6px;
+    padding-bottom: 5px;
+    margin-top:0px;
+}
+
+.s5
+{
+    padding-left: 10px;
+    border: 0;
+    float: left;
+}
+
+.s7 /* main div */
+{
+    border: 0px solid #000000;
+    width: 150px;
+    height: 210px;
+    float: left;
+    margin-right: 25px;
+    margin-top: 15px;
+}
+
+.s9 /* image div */
+{
+    border: 1px solid #7a7a7a;
+    width: 144px;
+    height: 94px;
+    margin: 0 auto;
+}
+
+.s9:hover 
+{
+	filter: alpha(opacity=70); 
+	opacity: 0.7;
+	border: 1px solid #C1D82F; /* assette green */
+}
+
+.s10 /* text div */ /* font size test */
+{
+    border: 0px solid #000000;
+    width: 150px;
+    height: 75px;
+    margin: 0 auto;
+    padding-top: 5px;
+    padding-left: 5px;
+    /*font-family: arial;*/
+    font-size: 9pt;
+    color: #7a7a7a;
+}
+
+.s11 /* settings image div */
+{
+    border: 0px solid #000000;
+    width: 150px;
+    height: 20px;
+    margin: 0 auto;
+}
+
+.s12 /* horizontal line div */
+{
+    border-top: 1px solid #7a7a7a;
+    border-bottom: 0px solid #000000;
+    border-left: 0px solid #000000;
+    border-right: 0px solid #000000;
+    width: 140px;
+    height: 2px;
+    margin: 0 auto;
+    vertical-align: top;
+}
+
+
+.s13
+{
+    position: fixed; 
+    width: 100px; 
+    height: 30px; 
+    left: 1420px;
+    top: 663px;
+    border: 3px solid #C1D82F;
+    background-color: #FDFEFF;
+    font-weight: bold;
+    padding: 10px;
+}
+
+
+.s14
+{
+    text-align: left;
+    padding-left: 8px;
+    /*font-family: arial;*/
+    font-size: 9pt;
+    color: #FF9B37; /*6666FF*/
+}
+
+
+.s15
+{
+    border:0px solid #000000; 
+    height: 100px; 
+    padding-left: 10px;
+}
+
+.s16
+{ 
+    padding-right: 4px;
+    padding-left: 0px;
+    padding-top: 7px;
+    /*font-family: arial;*/
+    font-size: 10pt;
+    color: #7a7a7a;
+    float: left;  
+    border: 0px solid #000000;
+    background-color: #FFFFFF; 
+    text-decoration: underline;
+    cursor: pointer;
+    outline:none;
+}
+
+.s17 
+{
+    border: 0px solid #000000;
+    width: 250px;
+    height: 75px;
+    float: left;
+    padding-top: 20px;
+    padding-left: 7px;
+    /*font-family: arial;*/
+    font-size: 10pt;
+    color: #7a7a7a;
+}
+
+.s18 
+{
+    border: 0px solid #000000;
+    width: 185px;
+    height: 25px;
+    float: left;
+}
+
+.s18:hover 
+{
+	filter: alpha(opacity=75); 
+	opacity: 0.75;
+	text-decoration: none;
+}
+
+.s19
+{
+    padding-left: 10px;
+    border: 0;
+}
+
+.s19:hover 
+{
+	filter: alpha(opacity=80); 
+	opacity: 0.8;
+}
+
+.s20
+{
+    position: fixed; 
+    width: 100px; 
+    height: 30px; 
+    left: 50%;
+    top: 50%;
+    border: 3px solid #C1D82F;
+    background-color: #FDFEFF;
+    font-weight: bold;
+    padding: 10px;
+}
+
+
+.s21
+{
+    text-align: left;
+    padding-left: 8px;
+    /*font-family: arial;*/
+    font-size: 9pt;
+    color: #FF9B37; /*6666FF*/
+}
+
+ 

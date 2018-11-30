@@ -1,0 +1,186 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ClientMasterPage.Master.cs"
+    Inherits="Assette.Web.ReportsGallery.MasterPage" %>
+
+<!DOCTYPE html>
+<html>
+<head id="Head1" runat="server">
+    <title>Assette - Gallery</title>
+    <%/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////%>
+    <%--Script Reference jquery--%>
+    <script src="Scripts/jQuery/json2.js" type="text/javascript"></script>
+    <script src="Scripts/jQuery/jquery-1.7.2.js" type="text/javascript"></script>
+    <script src="Scripts/jQuery/jquery.json-2.2.js" type="text/javascript"></script>
+    <%--Script Reference--%>
+    <script src="Scripts/js/Client/Script_C_Base.js" type="text/javascript"></script>
+    <script src="Scripts/js/Client/Script_C_Master.js" type="text/javascript"></script>
+    <%--StyleSheet Reference--%>
+    <link href="Styles/Client/StyleSheet_C_Master.css?v=33" rel="stylesheet" type="text/css" />
+    <%--Script Reference watermark--%>
+    <script src="Scripts/jQuery/WaterMark/jquery.watermark.js" type="text/javascript"></script>
+    <%--Share this Script Reference--%>
+    <script type="text/javascript">        var switchTo5x = false;</script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">        stLight.options({ publisher: "62df8832-b028-4ed4-8a10-ec8009f55605", hashAddressBar: false });</script>
+    <%--Media query StyleSheet Reference--%>
+    <link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1024px) and (orientation : landscape)"
+        href="Styles/Client/iPad/Landscape/StyleSheet_C_Master_768-1024-Landscape.css" />
+    <link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1024px) and (orientation : portrait) "
+        href="Styles/Client/iPad/Portrait/StyleSheet_C_Master_768-1024-Portrait.css" />
+    <%/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////%>
+    <asp:Literal ID="ltlHeader" runat="server" />
+    <asp:ContentPlaceHolder ID="HeaderContentPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <a name="top" id="top"></a>
+    <div class="m1">
+        <div class="m2">
+            <div class="m9" title="Assette © 2013">
+                <a href="client-welcome.aspx" style="outline: none;">
+                    <img src="Images/AssetteLogo.png" alt="Assette" class="m15" /></a></div>
+            <div class="m11">
+                <div id="divLogout" runat="server" style="display: none">
+                    <div style="padding-right: 10px;" title="Click to log-out">
+                        <asp:Button ID="btnLogout" runat="server" Text="Log Out" CssClass="m12" OnClick="btnLogout_Click" /></div>
+                    <div class="m10">
+                        |</div>
+                </div>
+                <div id="divLogin" runat="server" style="display: none">
+                    <div style="padding-right: 10px;" title="Click to log-in">
+                        <asp:Button ID="btnLogin" runat="server" Text="Log In" CssClass="m12" OnClick="btnLogin_Click" /></div>
+                    <div class="m10">
+                        |</div>
+                </div>
+                <div title="Lets you add report outlines to a private gallery and view later">
+                    <a id="A1" href="../" class="m10">Assette Home </a>
+                </div>
+                <div class="m10">
+                    |</div>
+                <div id="divShareLink" title="Click to share" runat="server">
+                    <a id="btnShare" href="javascript:void(0);" class="m10">Share</a>
+                    <div class="m10">
+                        |</div>
+                </div>
+                <div title="Go to help" style="display: none">
+                    <a href="javascript:void(0);" class="m10">Help</a></div>
+                <div class="m10" style="display: none">
+                    |</div>
+                <div title="Lets you add report outlines to a private gallery and view later">
+                    <a id="lnkMyGallery" href="my-gallery.aspx" class="m10">My Gallery </a>
+                </div>
+                <div class="m10" style="display: none">
+                    Welcome
+                    <asp:Label ID="lblName" runat="server" CssClass="m14"></asp:Label>&nbsp;&nbsp;&nbsp;|&nbsp;</div>
+            </div>
+        </div>
+        <div class="m7">
+            <div class="m3">
+                <div class="m8">
+                    <ul>
+                        <li title="Go to examples of our work" class="m20"><a id="samples" href="samples.aspx"
+                            style="outline: none;">Examples of Our Work</a></li>
+                        <li title="Go to report objects" class="m20"><a id="objects" href="report-objects.aspx"
+                            style="outline: none;">Report Layouts</a></li>
+                        <li title="Go to designs" class="m20"><a id="templates" href="template-designs.aspx"
+                            style="outline: none;">Designs</a></li>
+                    </ul>
+                </div>
+                <div class="m16">
+                    <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label></div>
+            </div>
+            <div class="m4">
+                <asp:ContentPlaceHolder ID="Content" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div style="clear: both">
+        </div>
+        <div class="m5">
+            <hr class="m6" />
+            Assette © 2013
+        </div>
+    </div>
+    <div id="divShare" class="m17">
+        <div class="m18">
+            <%--facebook --%>
+            <span class='st_facebook_large' st_url="http://www.assette.com/gallery" st_title="Check out Assette. They have everything you need to effectively communicate investment results to clients. See the comprehensive library of reports at ">
+            </span>
+            <%--twitter--%>
+            <span class="st_twitter_large" st_via="AssetteReport" st_url="http://www.assette.com/gallery"
+                st_title="Everything you need to effectively communicate with clients! Check out ">
+            </span>
+            <%--linkedin--%>
+            <span class='st_linkedin_large' st_title="Assette Gallery" st_summary="Check out Assette. They have everything you need to effectively communicate investment results to clients. See the comprehensive library of reports at "
+                st_url="http://www.assette.com/gallery"></span>
+            <%--email--%>
+            <span class='shareThisEmail' displaytext='Email'></span>
+        </div>
+        <div class="m19" title="Close">
+            x
+        </div>
+    </div>
+    <div id="divEmail" class="m21">
+        <div class="m34">
+            <div class="m28">
+                SHARE THIS WITH COLLEAGUES</div>
+            <div class="m24" title="To: (Type addresses, each seperated by a comma)">
+                <input type="text" id="EmailTo" class="m25" maxlength="200" />
+            </div>
+            <div class="m26">
+            </div>
+            <div class="m24" title="Please enter email from" style="display: none">
+                <input type="text" id="EmailFrom" class="m25" maxlength="200" />
+            </div>
+            <div class="m26">
+            </div>
+            <div class="m32" title="Please enter message">
+                <textarea id="EmailMessage" class="m27" rows="1" cols="1"></textarea>
+            </div>
+            <div class="m29">
+                <div class="m30" title="Click to send email">
+                    <input id="btnSend" type="button" value="SEND" class="m31" />
+                </div>
+            </div>
+            <div class="m29">
+                <div class="m30" title="Click to cancel sending email">
+                    <input id="btnCancel" type="button" value="CANCEL" class="m35" />
+                </div>
+            </div>
+            <div class="m36" id="emailValidation" style="display: none">
+            </div>
+        </div>
+        <div class="m23" title="Close">
+            x
+        </div>
+    </div>
+    <input id="hdnEmail" name="hdnEmail" type="hidden" runat="server" />
+    <input id="hdnFirstName" name="hdnFirstName" type="hidden" runat="server" />
+    <input id="hdnUrl" name="hdnUrl" type="hidden" runat="server" />
+    </form>
+    <!-- Start of Async HubSpot Analytics Code -->
+    <script type="text/javascript">
+        (function (d, s, i, r) {
+            if (d.getElementById(i)) { return; }
+            var n = d.createElement(s), e = d.getElementsByTagName(s)[0];
+            n.id = i; n.src = '//js.hubspot.com/analytics/' + (Math.ceil(new Date() / r) * r) + '/279299.js';
+            e.parentNode.insertBefore(n, e);
+        })(document, "script", "hs-analytics", 300000);
+    </script>
+    <!-- End of Async HubSpot Analytics Code -->
+    <!-- google analytics -->
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-32165472-1']);
+        _gaq.push(['_setDomainName', 'assette.com']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!-- google analytics -->
+</body>
+</html>

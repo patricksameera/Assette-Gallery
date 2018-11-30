@@ -1,0 +1,16 @@
+G:\Report Gallery - Versions\Sam Repo\Source\Assette.ReportGallery.Data\bin\Debug\Assette.ReportGallery.Data.dll.config
+G:\Report Gallery - Versions\Sam Repo\Source\Assette.ReportGallery.Data\bin\Debug\Assette.ReportGallery.Data.dll
+G:\Report Gallery - Versions\Sam Repo\Source\Assette.ReportGallery.Data\bin\Debug\Assette.ReportGallery.Data.pdb
+G:\Report Gallery - Versions\Sam Repo\Source\Assette.ReportGallery.Data\bin\Debug\Aspose.Slides.dll
+G:\Report Gallery - Versions\Sam Repo\Source\Assette.ReportGallery.Data\bin\Debug\BTA.EPM.Common.dll
+G:\Report Gallery - Versions\Sam Repo\Source\Assette.ReportGallery.Data\bin\Debug\itextsharp.dll
+G:\Report Gallery - Versions\Sam Repo\Source\Assette.ReportGallery.Data\bin\Debug\log4net.dll
+G:\Report Gallery - Versions\Sam Repo\Source\Assette.ReportGallery.Data\bin\Debug\MigraDoc.DocumentObjectModel.dll
+G:\Report Gallery - Versions\Sam Repo\Source\Assette.ReportGallery.Data\bin\Debug\MigraDoc.Rendering.dll
+G:\Report Gallery - Versions\Sam Repo\Source\Assette.ReportGallery.Data\bin\Debug\Newtonsoft.Json.dll
+G:\Report Gallery - Versions\Sam Repo\Source\Assette.ReportGallery.Data\bin\Debug\PdfSharp.dll
+G:\Report Gallery - Versions\Sam Repo\Source\Assette.ReportGallery.Data\bin\Debug\SlideStripper.dll
+G:\Report Gallery - Versions\Sam Repo\Source\Assette.ReportGallery.Data\obj\Debug\Assette.ReportGallery.Data.Resource.resources
+G:\Report Gallery - Versions\Sam Repo\Source\Assette.ReportGallery.Data\obj\Debug\Assette.ReportGallery.Data.csproj.GenerateResource.Cache
+G:\Report Gallery - Versions\Sam Repo\Source\Assette.ReportGallery.Data\obj\Debug\Assette.ReportGallery.Data.dll
+G:\Report Gallery - Versions\Sam Repo\Source\Assette.ReportGallery.Data\obj\Debug\Assette.ReportGallery.Data.pdb

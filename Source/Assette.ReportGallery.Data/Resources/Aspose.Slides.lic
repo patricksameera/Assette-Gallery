@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<License>
+  <Data>
+    <LicensedTo>Assette LLC</LicensedTo>
+    <LicenseType>Developer Enterprise Subscription</LicenseType>
+    <LicenseNote>Limited to 1 developer.</LicenseNote>
+    <OrderID>100811133625</OrderID>
+    <OEM>This is not a non-redistributable license</OEM>
+    <Products>
+      <Product>Aspose.Slides for .NET</Product>
+    </Products>
+    <EditionType>Enterprise</EditionType>
+    <SerialNumber>ad503e29-8312-42d7-ac6e-96a862254108</SerialNumber>
+    <SubscriptionExpiry>20110811</SubscriptionExpiry>
+    <LicenseVersion>2.2</LicenseVersion>
+  </Data>
+  <Signature>eTxe1zkZXk12ccrutk4bjCa6B/3qQfGz5sOMxYIJaxaDQnhelb1Hfgc9p+sMYYp6v901VkeUxTWgnHXcwf3z8FKuVL4cAybRb6s4HXhsesMyP0aeE9Er7bIXvm7XZTpq3BjusOEZnPlNEt+uTUld+z0B29V/Acm9l7v7lySv2EY=</Signature>
+</License>

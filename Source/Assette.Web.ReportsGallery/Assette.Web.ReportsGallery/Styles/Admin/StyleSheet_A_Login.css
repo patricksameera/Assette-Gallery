@@ -1,0 +1,160 @@
+﻿body 
+{
+   top: 0px;
+   right: 0px;
+   bottom: 0px;
+   left: 0px;
+   width:700px;
+   height: 100%;
+   margin: auto;
+   font-family: Helvetica, sans-serif, Arial !important;
+ } 
+ 
+ .l1
+{
+    border: 1px solid #C1D82F;
+    width: 290px;
+    height: 190px;
+    background: #C1D82F;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.l2
+{
+    margin-top: 35px;
+    margin-bottom: 8px;
+    margin-left: 10px;
+    font-size: 12pt;
+    color: #FFFFFF;
+}
+
+.l3
+{
+    width: 260px;
+    margin: 0 auto;
+    border: 0px solid black;
+    padding: 5px;
+    background: #F2F2F2;
+    color: #999999;
+    font-size: 12pt;
+}
+
+.l4
+{
+    width: 257px;
+    float: none;
+    background-color: #F2F2F2;
+    border-left: 1px solid #E5E5E5;
+    border-right: 1px solid #E5E5E5;
+    border-top: 1px solid #F2F2F2;
+    border-bottom: 1px solid #F2F2F2;
+}
+
+.l4:focus
+{
+	border-left: 1px solid #66cc00;
+    border-right: 1px solid #66cc00;
+    border-top: 1px solid #66cc00;
+    border-bottom: 1px solid #66cc00;
+}
+
+.l5
+{
+    margin-top: 25px;
+    margin-bottom: 8px;
+    margin-left: 10px;
+    font-size: 12pt;
+    color: #FFFFFF;
+}
+
+.l6
+{
+    padding-left: 9px;
+    padding-top: 10px;
+}
+
+.l7
+{
+    width: 75px;
+    height: 30px;
+    /*font-family: arial;*/
+    font-size: 10pt;
+    background: #FFFFFF;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    float: left;
+    font-weight: bold;
+    border: 1px solid #C1D82F;
+    color: #C1D82F;
+    outline:none;
+}
+
+.l7:hover,
+.l7:active 
+{
+	border-color: #66cc00;
+	background-color: #666;
+	background-position: 0 -50px;
+	color: #FFF;
+	cursor: pointer;
+}
+
+.l8
+{
+    display: none; 
+    position: absolute;     
+    top: 500px; 
+    left: 730px;
+    text-align: left;
+    width: 120px; 
+    height: 30px; 
+    border: 3px solid #C1D82F;
+    background-color: #FDFEFF;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.l9
+{
+    text-align: left;
+    padding-left: 8px;
+    font-size: 9pt;
+    color: #FF9B37;
+}
+
+.l10
+{
+    height: 240px;
+    border: 0px solid #000000;
+}
+
+.l11
+{
+    height: 113px;
+    width: 299px;
+    border: 0px solid #000000;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.l12
+{
+    height: 113px;
+    width: 299px;
+    border: 0px solid #000000;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.l13
+{    
+    border: 0px solid #000000;
+    margin: 0 auto;
+    width: 290px;
+    color: Red;
+    padding-left: 250px;
+    font-size: 14px;
+    line-height: 20px;
+}

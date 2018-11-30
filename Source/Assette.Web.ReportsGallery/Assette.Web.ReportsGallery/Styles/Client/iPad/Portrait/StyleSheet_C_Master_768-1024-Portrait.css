@@ -1,0 +1,279 @@
+﻿/*
+Original 
+========
+Full : 1200px;
+Navigation : 300px;
+Content : 900px;
+
+iPad (1024*768)
+===============
+Full : 748px;
+Orientation : Portrait
+Percentage : 62.33333%
+
+Navigation : 186.99px;
+Content : 560.99px;
+
+Navigation : 188px;
+Content : 560px;
+
+*/
+
+body 
+{
+   top: 0px;
+   right: 0px;
+   bottom: 0px;
+   left: 0px;
+   width:748px;
+   height: 100%;
+   margin: 0 auto;
+   outline: none;
+} 
+ 
+html 
+{
+    overflow-y: scroll;
+}
+
+.m1 /* main */
+{
+    width: 748px;
+    border: 0px solid #000000;  
+    margin-top: 30px;  
+}
+
+.m2 /* header */
+{
+    height: 113px;
+    width: 748px;
+    border: 0px solid #000000;
+    /*background-color: Blue;*/
+}
+
+.m7 /* centre */
+{
+    width: 748px;
+    border: 0px solid #000000;
+    min-height: 400px;
+}
+
+.m3 /* navigation */
+{
+    border: 0px solid #000000;
+    width: 188px;
+    min-height: 400px;
+    float: left;
+}
+
+.m4 /* content */
+{
+    border: 0px solid #000000;
+    min-height: 400px;
+    width: 560px;
+    float: right;
+}
+
+.m5 /* footer */
+{
+    border: 0px solid #000000;
+    color: #4e5766;
+    /*min-height: 20px;*/
+    padding-left: 10px;
+    /*font-family: arial;*/
+    font-size: 9pt;
+    width: 738px;
+    height: 30px;
+    position: relative;
+}
+
+.m6
+{
+    /*float: left;*/    
+    /*width: 1100px;*/   
+}
+
+.m9
+{
+    float: left;
+    width: 188px;
+    height: 113px;
+    /*background-color: Red;*/
+}
+
+.m10
+{
+    padding-right: 7px;
+    padding-left: 7px;
+    padding-top: 20px;
+    /*font-family: arial;*/
+    font-size: 10pt;
+    color: #7a7a7a;
+    float: right;  
+    outline:none;
+}
+
+.m10:hover 
+{
+	filter: alpha(opacity=75); 
+	opacity: 0.75;
+	text-decoration: none;
+}
+
+.m11
+{
+    float: right;
+    width: 560px;
+    border: 0px solid #000000;
+    height: 113px;
+    /*background-color: Aqua;*/
+}
+
+.m12
+{ 
+    padding-right: 7px;
+    padding-left: 7px;
+    padding-top: 19px;
+    /*font-family: arial;*/
+    font-size: 10pt;
+    color: #7a7a7a;
+    float: right;  
+    border: 0px solid #000000;
+    background-color: #FFFFFF; 
+    text-decoration: underline;
+    cursor: pointer;
+    outline:none;
+}
+
+.m12:hover 
+{
+	filter: alpha(opacity=75); 
+	opacity: 0.75;
+	text-decoration: none;
+}
+
+/*.m13
+{ 
+    clear: left;
+}*/
+
+.m14
+{ 
+    color: #C1D82F; 
+    font-weight: bold;
+    width: 100px;
+}
+
+.m15
+{ 
+    border: 0;
+    width: 188px;
+    height: 113px;
+}
+
+/* menu - start */
+
+.m8 
+{
+    width: 188px;
+    float: left;
+}
+
+.m8 ul 
+{
+    list-style: none;
+    margin: 15px;
+    padding: 0px;
+}
+
+.m8 li
+{
+    border-bottom: 5px solid #ED9F9F;
+    border-bottom-color: #FFFFFF;
+}
+
+.m8 li a:link, .m8 li a:visited  
+{
+    /*font-family: arial;*/
+    font-size: 10pt;
+    display: block;
+    padding: 5px 5px 5px 10px;
+    background-color: #999999;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.m8 li a:hover
+{
+    /*background-color: #C1D82F;*/
+    background-color: #0397D6 !important; 
+    color: #ffffff;
+}
+
+/*
+.m8 li a:active
+{
+    background-color: Red;
+}*/
+
+/* menu - end */
+
+.m16
+{ 
+    margin-top: 20px;
+    margin-right: 15px;
+    margin-left: 15px;
+    color: #7a7a7a;
+    /*font-family: arial;*/
+    font-size: 10pt;
+    text-align: left;
+    width: 160px;
+    float: left;
+}
+
+.m17
+{
+    display: none; 
+    position: absolute;     
+    top: 70px; 
+    left: 1150px;
+    text-align: left;
+    width: 220px; 
+    height: 45px; 
+    border: 3px solid #C1D82F;
+    background-color: #FDFEFF;
+    font-weight: bold;
+    /*padding: 10px;*/
+}
+
+.m18
+{
+    float: left;
+    border: 0px solid #C1D82F;
+    padding: 5px;
+}
+
+.m19
+{
+    float: right;
+    border: 0px solid #C1D82F;
+    width: 8px;
+    /*font-family: arial;*/
+    font-size: 10pt;
+    font-weight: bold;
+    cursor: pointer;
+    padding-top: 2px;
+    padding-right: 5px;
+}
+
+.m20
+{
+    outline:none;
+}
+
+.m20:hover 
+{
+	filter: alpha(opacity=85); 
+	opacity: 0.85;	
+}

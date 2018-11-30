@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assette.Web.ReportsGallery", "Assette.Web.ReportsGallery\Assette.Web.ReportsGallery\Assette.Web.ReportsGallery.csproj", "{276DFD95-1080-4100-ADE9-AD3F34F20684}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assette.ReportGallery.Proxy", "Assette.ReportGallery.Proxy\Assette.ReportGallery.Proxy.csproj", "{77C11976-0192-463A-B21F-09FDAFACF987}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assette.ReportGallery.Data", "Assette.ReportGallery.Data\Assette.ReportGallery.Data.csproj", "{6C86F457-0E3B-4EDD-B6B7-D7F0ECE24001}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{626760B3-AA3C-4EAA-9F97-6BE2CF39A7F0}"
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Assette.Web.ReportsGallery.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{276DFD95-1080-4100-ADE9-AD3F34F20684}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{276DFD95-1080-4100-ADE9-AD3F34F20684}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{276DFD95-1080-4100-ADE9-AD3F34F20684}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{276DFD95-1080-4100-ADE9-AD3F34F20684}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77C11976-0192-463A-B21F-09FDAFACF987}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77C11976-0192-463A-B21F-09FDAFACF987}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77C11976-0192-463A-B21F-09FDAFACF987}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77C11976-0192-463A-B21F-09FDAFACF987}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C86F457-0E3B-4EDD-B6B7-D7F0ECE24001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C86F457-0E3B-4EDD-B6B7-D7F0ECE24001}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C86F457-0E3B-4EDD-B6B7-D7F0ECE24001}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C86F457-0E3B-4EDD-B6B7-D7F0ECE24001}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

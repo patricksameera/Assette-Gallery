@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RepGlryModelStoreContainer" CdmEntityContainer="RepGlryEntities">
+    <EntitySetMapping Name="PAObjectCategories1">
+      <EntityTypeMapping TypeName="RepGlryModel.PAObjectCategory">
+        <MappingFragment StoreEntitySet="paObjectCategories">
+          <ScalarProperty Name="Prefix" ColumnName="Prefix" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PAObjectTypes1">
+      <EntityTypeMapping TypeName="RepGlryModel.PAObjectType">
+        <MappingFragment StoreEntitySet="paObjectTypes">
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FirmTypes">
+      <EntityTypeMapping TypeName="RepGlryModel.FirmTypes">
+        <MappingFragment StoreEntitySet="GLRY_FirmTypes">
+          <ScalarProperty Name="FirmName" ColumnName="FirmName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SampleReports">
+      <EntityTypeMapping TypeName="RepGlryModel.SampleReports">
+        <MappingFragment StoreEntitySet="GLRY_SampleReports">
+          <ScalarProperty Name="PreRegisterPreView" ColumnName="PreRegisterPreView" />
+          <ScalarProperty Name="ProductType" ColumnName="ProductType" />
+          <ScalarProperty Name="FirmType" ColumnName="FirmType" />
+          <ScalarProperty Name="ViewCount" ColumnName="ViewCount" />
+          <ScalarProperty Name="UploadedBy" ColumnName="UploadedBy" />
+          <ScalarProperty Name="UploadedDate" ColumnName="UploadedDate" />
+          <ScalarProperty Name="LongDescription" ColumnName="LongDescription" />
+          <ScalarProperty Name="ShortDescription" ColumnName="ShortDescription" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PresentationFile" ColumnName="PresentationFile" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Prospects">
+      <EntityTypeMapping TypeName="RepGlryModel.Prospects">
+        <MappingFragment StoreEntitySet="GLRY_Prospects">
+          <ScalarProperty Name="FirmType" ColumnName="FirmType" />
+          <ScalarProperty Name="FirmAUM" ColumnName="FirmAUM" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+          <ScalarProperty Name="RegisteredDate" ColumnName="RegisteredDate" />
+          <ScalarProperty Name="RegisteredIP" ColumnName="RegisteredIP" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductTypes">
+      <EntityTypeMapping TypeName="RepGlryModel.ProductTypes">
+        <MappingFragment StoreEntitySet="GLRY_ProductTypes">
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TemplateDesigns">
+      <EntityTypeMapping TypeName="RepGlryModel.TemplateDesigns">
+        <MappingFragment StoreEntitySet="GLRY_TemplateDesigns">
+          <ScalarProperty Name="PreRegisterPreView" ColumnName="PreRegisterPreView" />
+          <ScalarProperty Name="ProductType" ColumnName="ProductType" />
+          <ScalarProperty Name="FirmType" ColumnName="FirmType" />
+          <ScalarProperty Name="ViewCount" ColumnName="ViewCount" />
+          <ScalarProperty Name="UploadedBy" ColumnName="UploadedBy" />
+          <ScalarProperty Name="UploadedDate" ColumnName="UploadedDate" />
+          <ScalarProperty Name="LongDescription" ColumnName="LongDescription" />
+          <ScalarProperty Name="ShortDescription" ColumnName="ShortDescription" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PresentationFile" ColumnName="PresentationFile" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SampleReportPages">
+      <EntityTypeMapping TypeName="RepGlryModel.SampleReportPages">
+        <MappingFragment StoreEntitySet="GLRY_SampleReportPages">
+          <ScalarProperty Name="SampleReportId" ColumnName="SampleReportId" />
+          <ScalarProperty Name="ViewCount" ColumnName="ViewCount" />
+          <ScalarProperty Name="Thumbnail" ColumnName="Thumbnail" />
+          <ScalarProperty Name="PageImage" ColumnName="PageImage" />
+          <ScalarProperty Name="PageNo" ColumnName="PageNo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TemplateDesignPages">
+      <EntityTypeMapping TypeName="RepGlryModel.TemplateDesignPages">
+        <MappingFragment StoreEntitySet="GLRY_TemplateDesignPages">
+          <ScalarProperty Name="TemplateDesignId" ColumnName="TemplateDesignId" />
+          <ScalarProperty Name="ViewCount" ColumnName="ViewCount" />
+          <ScalarProperty Name="Thumbnail" ColumnName="Thumbnail" />
+          <ScalarProperty Name="PageImage" ColumnName="PageImage" />
+          <ScalarProperty Name="PageNo" ColumnName="PageNo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PAObjects1">
+      <EntityTypeMapping TypeName="RepGlryModel.PAObject">
+        <MappingFragment StoreEntitySet="paObjects">
+          <ScalarProperty Name="ClientType" ColumnName="ClientType" />
+          <ScalarProperty Name="ObjectThumbnail" ColumnName="ObjectThumbnail" />
+          <ScalarProperty Name="ObjectImage" ColumnName="ObjectImage" />
+          <ScalarProperty Name="ObjectPackGuid" ColumnName="ObjectPackGuid" />
+          <ScalarProperty Name="ObjectPackID" ColumnName="ObjectPackID" />
+          <ScalarProperty Name="ObjectID" ColumnName="ObjectID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ObjectCategoryID" ColumnName="ObjectCategoryID" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+          <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="PowerPointFile" ColumnName="PowerPointFile" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="BinaryImage" ColumnName="BinaryImage" />
+          <ScalarProperty Name="TransformXSL" ColumnName="TransformXSL" />
+          <ScalarProperty Name="ObjectTag" ColumnName="ObjectTag" />
+          <ScalarProperty Name="FormatXML" ColumnName="FormatXML" />
+          <ScalarProperty Name="NodeValue" ColumnName="NodeValue" />
+          <ScalarProperty Name="PropertyXML" ColumnName="PropertyXML" />
+          <ScalarProperty Name="ObjectXML" ColumnName="ObjectXML" />
+          <ScalarProperty Name="SPName" ColumnName="SPName" />
+          <ScalarProperty Name="ParamsXML" ColumnName="ParamsXML" />
+          <ScalarProperty Name="ObjectTypeID" ColumnName="ObjectTypeID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GalleryNotes">
+      <EntityTypeMapping TypeName="RepGlryModel.GalleryNotes">
+        <MappingFragment StoreEntitySet="GLRY_GalleryNotes">
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="GalleryContentId" ColumnName="GalleryContentId" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="RepGlryModel.Roles">
+        <MappingFragment StoreEntitySet="GLRY_Roles">
+          <ScalarProperty Name="ApplicationName" ColumnName="ApplicationName" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="RepGlryModel.Users">
+        <MappingFragment StoreEntitySet="GLRY_Users">
+          <ScalarProperty Name="RegisteredDate" ColumnName="RegisteredDate" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ApplicationName" ColumnName="ApplicationName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="GLRY_UsersInRoles" TypeName="RepGlryModel.GLRY_UsersInRoles" StoreEntitySet="GLRY_UsersInRoles">
+      <EndProperty Name="GLRY_Roles">
+        <ScalarProperty Name="ApplicationName" ColumnName="ApplicationName" />
+        <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+      </EndProperty>
+      <EndProperty Name="GLRY_Users">
+        <ScalarProperty Name="UserId" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="PAObjectPreViews">
+      <EntityTypeMapping TypeName="RepGlryModel.PAObjectPreView">
+        <MappingFragment StoreEntitySet="GLRY_PAObjectPreView">
+          <ScalarProperty Name="ObjectId" ColumnName="ObjectId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PAObjectMockups1">
+      <EntityTypeMapping TypeName="RepGlryModel.PAObjectMockup">
+        <MappingFragment StoreEntitySet="paObjectMockups">
+          <ScalarProperty Name="UploadedBy" ColumnName="UploadedBy" />
+          <ScalarProperty Name="UploadedDate" ColumnName="UploadedDate" />
+          <ScalarProperty Name="ViewCount" ColumnName="ViewCount" />
+          <ScalarProperty Name="PreRegisterPreView" ColumnName="PreRegisterPreView" />
+          <ScalarProperty Name="ObjectThumbnail" ColumnName="ObjectThumbnail" />
+          <ScalarProperty Name="ObjectImage" ColumnName="ObjectImage" />
+          <ScalarProperty Name="ClientType" ColumnName="ClientType" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ObjectTypeID" ColumnName="ObjectTypeID" />
+          <ScalarProperty Name="ObjectCategoryID" ColumnName="ObjectCategoryID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PAObjectCategoryOrders">
+      <EntityTypeMapping TypeName="RepGlryModel.PAObjectCategoryOrder">
+        <MappingFragment StoreEntitySet="GLRY_paObjectCategoryOrder">
+          <ScalarProperty Name="IsVisible" ColumnName="IsVisible" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="PaObjectCategoryId" ColumnName="PaObjectCategoryId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProspectsGalleryContents">
+      <EntityTypeMapping TypeName="RepGlryModel.ProspectsGalleryContents">
+        <MappingFragment StoreEntitySet="GLRY_ProspectsGalleryContents">
+          <ScalarProperty Name="TableType" ColumnName="TableType" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="ObjectId" ColumnName="ObjectId" />
+          <ScalarProperty Name="PropsectId" ColumnName="PropsectId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientConfigurations">
+      <EntityTypeMapping TypeName="RepGlryModel.ClientConfiguration">
+        <MappingFragment StoreEntitySet="ClientConfigurations">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IsApplicationVariable" ColumnName="IsApplicationVariable" />
+          <ScalarProperty Name="DataType" ColumnName="DataType" />
+          <ScalarProperty Name="ParamValue" ColumnName="ParamValue" />
+          <ScalarProperty Name="ParamName" ColumnName="ParamName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

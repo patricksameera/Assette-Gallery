@@ -1,0 +1,55 @@
+/* default */
+
+p#vtip 
+{ 
+    display: none; 
+    position: absolute; 
+    padding: 10px; 
+    left: 5px; 
+    background-color: white; 
+    border: 1px solid #a6c9e2;
+    /*border: 1px solid #C1D82F;*/
+    -moz-border-radius: 5px; 
+    -webkit-border-radius: 5px;
+    z-index: 9999;
+    /*font-family: arial;*/
+    font-size: 11pt;
+    color: #7a7a7a;
+    width: 300px;
+    line-height: 1.4;
+}
+      
+p#vtip #vtipArrow 
+{ 
+    position: absolute; 
+    top: -10px; 
+    left: 5px 
+}
+
+/* right */
+
+p#vtipRight 
+{ 
+    display: none; 
+    position: absolute; 
+    padding: 10px; 
+    left: 5px; 
+    background-color: white; 
+    border: 1px solid #a6c9e2;
+    /*border: 1px solid #C1D82F;*/
+    -moz-border-radius: 5px; 
+    -webkit-border-radius: 5px;
+    z-index: 9999;
+    /*font-family: arial;*/
+    font-size: 11pt;
+    color: #7a7a7a;
+    width: 450px;
+    line-height: 1.4;
+}
+      
+p#vtipRight #vtipArrowRight 
+{ 
+    position: absolute; 
+    top: -10px; 
+    left: 400px 
+}
